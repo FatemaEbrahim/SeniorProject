@@ -1,0 +1,352 @@
+ {% load static %}
+<style>
+  
+
+
+* {
+	box-sizing:border-box;
+}
+
+body {
+	background: #eeeeee48;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+p {
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 2px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid 
+#a4c639;
+	background-color: 
+#a4c639;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 110%;
+	text-align: center;
+
+	
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.log-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+
+
+.overlay {
+	background: 
+#a4c639;
+	background: -webkit-linear-gradient(to right, 
+#a4c639, 
+#a4c639);
+	background: linear-gradient(to right, 
+#a4c639, 
+#a4c639);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+}
+
+
+.overlay-right {
+	right: 0;
+}
+
+
+.social-container {
+	margin: 50px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+/* Users */
+body {
+  padding: 1rem;
+  color: black;
+}
+
+h1 {
+  color: #18191b;
+  margin-bottom: 2rem;
+}
+
+section {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+section > div {
+  flex: 1;
+  padding: 0.2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:not(:disabled) ~ label {
+  cursor: pointer;
+}
+input[type="radio"]:disabled ~ label {
+  color: #bcc2bf;
+  border-color: #bcc2bf;
+  box-shadow: none;
+}
+
+label {
+  display: block;
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.438);
+  border-radius: 2px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+  position: relative;
+}
+
+input[type="radio"]:checked + label {
+  background: rgba(211, 211, 211, 0.096);;
+  color: gray;
+}
+input[type="radio"]:checked + label::after {
+  color: #a4c639;
+  font-family: FontAwesome;
+  border: 2px solid rgba(128, 128, 128, 0.438);;
+  content: "\f00c";
+  font-size: 24px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+p {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration:  underline;
+  font-size: 12px;
+}
+m{
+	font-size: 14.5px;
+}
+
+  /*footer*/
+  .footer {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:  #343434;
+  color: white;
+  text-align: center;
+  
+
+}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
+	<link rel="stylesheet" href="style.css">
+	
+	<title>ITS</title>
+	 
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form action="#">
+				<h1>Login</h1>
+                <section>
+ 
+                    <div>
+                      <input type="radio" id="control_01" name="select" value="1">
+                      <label for="control_01">
+                       
+                         <img  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQ2My45MDJweCIgaGVpZ2h0PSI0NjMuOTAycHgiIHZpZXdCb3g9IjAgMCA0NjMuOTAyIDQ2My45MDIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ2My45MDIgNDYzLjkwMjsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGcgaWQ9IkxheWVyXzJfOV8iPg0KCQk8Zz4NCgkJCTxwYXRoIGQ9Ik05MC43MjIsODAuMjVjNC40NzgsMi41MiwzNC42MiwxNy4wODIsNDkuMTgyLDI0LjA5NGMwLjA1Nyw1LjY1MiwwLjE4MiwxNS40MjYsMC4zNzQsMTUuNTkyDQoJCQkJYzEuNjA1LDEzLjk5Niw0LjM2LDI5LjU0NSw1LjE1OCwzMy45MzZjLTEuMzI0LDAuNzM0LTguMTI5LDUuMTg0LTguMTI5LDE5LjAyNWMwLjAwNiwwLjA3OCwwLjAxMywwLjE1LDAuMDE5LDAuMjI5DQoJCQkJYy0wLjAxLDAuMzYzLTAuMDE5LDAuNzI5LTAuMDE5LDEuMTA1YzIuOTI5LDM4LjQ3MSwxOC4yMjksMjEuODkxLDIxLjM4NCwzOC43NDJjNS4yNDgsMjguMDE4LDMwLjA1Niw0OC4yODksNDUuNDk4LDU1LjI4Nw0KCQkJCWM4LjkyNSw0LjA0MywxOC4xMSw2LjEwNSwyNy43NjMsNi4zMDNjOS42NTMtMC4xOTcsMTguODM4LTIuMjYsMjcuNzYzLTYuMzAzYzE1LjQ0Mi02Ljk5OCw0MC4yNS0yNy4yNyw0NS40OTgtNTUuMjg3DQoJCQkJYzMuMTU1LTE2Ljg1MiwxOC40NTUtMC4yNzEsMjEuMzg1LTM4Ljc0MmMwLTAuMzc3LTAuMDEtMC43NDItMC4wMi0xLjEwNWMwLjAwNi0wLjA3OCwwLjAxMy0wLjE1LDAuMDItMC4yMjkNCgkJCQljMC0xMy44NDItNi44MDctMTguMjkxLTguMTMtMTkuMDI1YzAuNzk5LTQuMzkxLDMuNTU0LTE5LjkzOSw1LjE1OC0zMy45MzZjMC4xOTEtMC4xNjYsMC4zMTctOS45MzksMC4zNzQtMTUuNTkyDQoJCQkJYzcuOTk4LTMuODUyLDIwLjY5Mi05Ljk3OSwzMS4yNTYtMTUuMTM5djM3LjE4OWMtMi45MzQsMS43MzItNC45OTcsNC43ODktNC45OTcsOC40MzRjMCwzLjIyNywxLjYzOCw1Ljk2MSw0LjAyNSw3Ljc2OA0KCQkJCWMwLDAtNC4yNDQsMjMuODU1LTUuNjE2LDMwLjg3MWMtMS4zNzIsNy4wMTQsMjQuMjAxLDUuNjA3LDIzLjA1LDBjLTEuMTUtNS42MDktNS42MTMtMzAuODcxLTUuNjEzLTMwLjg3MQ0KCQkJCWMyLjM4OC0xLjgwNyw0LjAyNS00LjU0MSw0LjAyNS03Ljc2OGMwLTMuNjQ2LTIuMDU0LTYuNzAxLTQuOTg2LTguNDM0Vjg0LjM0NmMzLjkzNy0xLjk1Myw2Ljg2Ny0zLjQzOCw4LjAzNy00LjA5Ng0KCQkJCWMzLjE2OS0xLjc4Myw0Ljg3NS00LjA2NCw0LjUxNS02LjQzNGMwLjQzMy0yLjQ3MS0xLjM1NC01LjEyNy02LjE0OS03LjQ3NUMzMzcuMzI0LDQ5LjU4OSwyNTAuMDc2LDYuODkyLDI0MS40NDksMi43NzcNCgkJCQljLTMuNzY0LTEuNzk1LTYuODYyLTIuNTg4LTkuNDk3LTIuNzc3Yy0yLjYzNSwwLjE4OS01LjczMywwLjk4Mi05LjQ5NywyLjc3N0MyMTMuODI4LDYuODkyLDEyNi41OCw0OS41OSw5Mi4zNTgsNjYuMzQxDQoJCQkJYy00Ljc5NywyLjM0OC02LjU4Myw1LjAwNC02LjE0OSw3LjQ3NUM4NS44NDcsNzYuMTg2LDg3LjU1NCw3OC40NjcsOTAuNzIyLDgwLjI1eiIvPg0KCQkJPHBhdGggZD0iTTM0OC4xMDQsMzIwLjg4NWMtMTYuMTAxLTUuODA1LTQ0LjEyNS0yMi41NDEtNDguOTI3LTI1LjEyM2MtMS4yNDQtMC43MjMtMi42ODYtMS4xNDUtNC4yMjktMS4xNDUNCgkJCQljLTMuMzY5LDAtNi4yNjksMS45NzctNy42MTksNC44MzhjLTEzLjI3NSwyMi4yMjMtMzcuODg2LDg2Ljg0Ni01NS4wNTgsODguMDQ1Yy0wLjEwNS0wLjAwOC0wLjIxMy0wLjAyOS0wLjMxOS0wLjA0MQ0KCQkJCWMtMC4xMDYsMC4wMTItMC4yMTQsMC4wMzMtMC4zMTksMC4wNDFjLTE3LjE3Mi0xLjE5OS00MS43ODMtNjUuODIyLTU1LjA1OC04OC4wNDVjLTEuMzUxLTIuODYxLTQuMjUtNC44MzgtNy42MTktNC44MzgNCgkJCQljLTEuNTQ0LDAtMi45ODUsMC40MjItNC4yMywxLjE0NWMtNC44MDEsMi41ODItMzIuODI2LDE5LjMxOC00OC45MjYsMjUuMTIzYy01NC4wNDIsMTkuNDg2LTc4LjM0OCwzOS4zNTktNzguMzQ4LDUyLjkxDQoJCQkJYzAsMC4zOTMsMCwwLjg0MiwwLDEuMzM0YzAsMTYuNTA0LDAsODcuNDM5LDAsODcuNDM5YzAsMC44NjQsMCwxLjMzNCwwLDEuMzM0aDE5NC4xODFoMC4zMTloMC4zMTloMTk0LjE4MWMwLDAsMC0wLjQ3LDAtMS4zMzQNCgkJCQljMCwwLDAtNzAuOTM3LDAtODcuNDM5YzAtMC40OTIsMC0wLjk0MSwwLTEuMzM0QzQyNi40NTEsMzYwLjI0NCw0MDIuMTQ2LDM0MC4zNzEsMzQ4LjEwNCwzMjAuODg1eiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo" style="width:65%">
+                         <strong style="font-size: 6pt"> <br>Student</strong> </label>
+                       
+                        
+                    </div>
+                    <div>
+                      <input type="radio" id="control_02" name="select" value="2">
+                      <label for="control_02">
+                        
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjUuOTE2IDI1LjkxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUuOTE2IDI1LjkxNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIHN0eWxlPSJmaWxsOiMwMzAxMDQ7IiBkPSJNNy45MzgsOC4xM2MwLjA5LDAuNDE0LDAuMjI4LDAuNjgyLDAuMzg5LDAuODQ5YzAuMzgzLDIuNjY2LDIuNzc2LDQuOTM4LDQuNjk4LDQuODQzDQoJCQljMi40NDUtMC4xMiw0LjE3OC0yLjc1NSw0LjU2Ny00Ljg0M2MwLjE2MS0wLjE2NiwwLjMxNi0wLjUyMSwwLjQwOS0wLjkzOGMwLjEwNC0wLjQ3OSwwLjIxNi0xLjIwMS0wLjA3Mi0xLjU4Mw0KCQkJYy0wLjAxNy0wLjAyLTAuMTI3LTAuMTIxLTAuMTQ2LTAuMTM4YzAuMjc1LTAuOTkyLDAuODc5LTIuNzYyLTAuNjI1LTQuMzUzYy0wLjgxNS0wLjg2Mi0xLjk0Ny0xLjI5NS0yLjk3LTEuNjM3DQoJCQljLTMuMDItMS4wMDktNS4xNTIsMC40MDYtNi4xMzYsMi43NTlDNy45ODEsMy4yNTYsNy41MjIsNC4zMTMsOC4wNzgsNi4zMkM4LjAyNCw2LjM1Niw3Ljk3NSw2LjQwMiw3LjkzNCw2LjQ1OA0KCQkJQzcuNjQ1LDYuODM5LDcuODMzLDcuNjUxLDcuOTM4LDguMTN6Ii8+DQoJCTxwYXRoIHN0eWxlPSJmaWxsOiMwMzAxMDQ7IiBkPSJNMjMuNTU3LDIyLjc5MmMtMC4wODQtMS44MzUtMC4xODgtNC43NDMtMS43OTEtNy4xMjJjMCwwLTAuNDU3LTAuNjIzLTEuNTQxLTEuMDM3DQoJCQljMCwwLTIuMzU0LTAuNzE3LTMuNDM4LTEuNDkybC0wLjQ5NSwwLjMzOWwwLjA1NSwzLjIxOGwtMi45NzIsNy45MzRjLTAuMDY1LDAuMTc0LTAuMjMxLDAuMjg5LTAuNDE2LDAuMjg5DQoJCQlzLTAuMzUxLTAuMTE1LTAuNDE2LTAuMjg5bC0yLjk3MS03LjkzNGMwLDAsMC4wNTUtMy4yMDgsMC4wNTQtMy4yMThjMC4wMDcsMC4wMjctMC40OTYtMC4zMzktMC40OTYtMC4zMzkNCgkJCWMtMS4wODIsMC43NzUtMy40MzcsMS40OTItMy40MzcsMS40OTJjLTEuMDg0LDAuNDE0LTEuNTQxLDEuMDM3LTEuNTQxLDEuMDM3Yy0xLjYwMiwyLjM3OS0xLjcwOCw1LjI4Ny0xLjc5Miw3LjEyMg0KCQkJYy0wLjA1OCwxLjI2OCwwLjIwOCwxLjc0MSwwLjU0MiwxLjg3NmM0LjE0NiwxLjY2NCwxNS45NjUsMS42NjQsMjAuMTEyLDBDMjMuMzUsMjQuNTM0LDIzLjYxNCwyNC4wNiwyMy41NTcsMjIuNzkyeiIvPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojMDMwMTA0OyIgZD0iTTEzLjA2NSwxNC44NDdsLTAuMTM0LDAuMDAzYy0wLjQzMiwwLTAuODY4LTAuMDg0LTEuMjk2LTAuMjMybDEuMTc4LDEuODAzbC0xLjA1NywxLjAyDQoJCQlsMS4wODgsNi42MDdjMC4wMDksMC4wNTcsMC4wNTgsMC4wOTgsMC4xMTYsMC4wOThjMC4wNTcsMCwwLjEwNi0wLjA0MSwwLjExNi0wLjA5OGwxLjA4OC02LjYwN2wtMS4wNTgtMS4wMmwxLjE2MS0xLjc3Ng0KCQkJQzEzLjg4OCwxNC43NTYsMTMuNDg3LDE0LjgzLDEzLjA2NSwxNC44NDd6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" alt="Forest" style="width:65%">
+                         <strong style="font-size: 6pt">  <br>Coordinator</strong> </label>
+                      
+                    </div>
+                   <div>
+                      <input type="radio" id="control_03" name="select" value="3">
+                      <label for="control_03">
+                        
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICdodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQnPgo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjk3IDI5NyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI5NyAyOTciPgogIDxnPgogICAgPHBhdGggZD0iTTE0OC41MSwxMTcuMjE2YzMyLjMxNywwLDU4LjYwOC0yNi4yOTEsNTguNjA4LTU4LjYwOFMxODAuODI3LDAsMTQ4LjUxLDBjLTMyLjMxNywwLTU4LjYwOCwyNi4yOTEtNTguNjA4LDU4LjYwOCAgIFMxMTYuMTkzLDExNy4yMTYsMTQ4LjUxLDExNy4yMTZ6Ii8+CiAgICA8cGF0aCBkPSJtMjI3LjE1NCwxNDUuNjE4Yy0wLjAyNS0wLjAwOC0wLjA3My0wLjAyNi0wLjA5OC0wLjAzMi03LjYzMS0xLjg2NC0zMC45OTktNS4xMzMtMzAuOTk5LTUuMTMzLTIuNjM4LTAuODEyLTUuNDU3LDAuNTg1LTYuNDA2LDMuMTg4bC0zNS4xNzQsOTYuNTA5Yy0yLjAyOSw1LjU2Ny05LjkwMyw1LjU2Ny0xMS45MzIsMGwtMzUuMTc0LTk2LjUwOWMtMC43NjYtMi4xMDItMi43NS0zLjQyLTQuODc2LTMuNDItMC41MDQsMC0yNC41MzEsMy4zNjktMzIuNTMsNS4zNTgtMjEuODU4LDUuNDM1LTM1LjY0NSwyNi45MjktMzUuNjQ1LDQ5LjMyOXY4MC4zMDJjMCwxMi4wMzQgOS43NTYsMjEuNzkgMjEuNzksMjEuNzloMTg0Ljc4MmMxMi4wMzQsMCAyMS43OS05Ljc1NiAyMS43OS0yMS43OXYtODAuNTY5Yy0wLjAwMS0yMi4zMDMtMTQuMzI4LTQyLjA5Ni0zNS41MjgtNDkuMDIzeiIvPgogICAgPHBhdGggZD0ibTE2MS43NzUsMTM4LjYxM2MtMS40MDQtMS41My0zLjQ1Ni0yLjI5OS01LjUzMi0yLjI5OWgtMTUuNDg1Yy0yLjA3NiwwLTQuMTI5LDAuNzctNS41MzIsMi4yOTktMi4xNzMsMi4zNjgtMi40ODksNS43ODktMC45NDYsOC40NjJsOC4yNzgsMTIuNDc5LTMuODc1LDMyLjY5IDcuNjMxLDIwLjNjMC43NDQsMi4wNDIgMy42MzEsMi4wNDIgNC4zNzUsMGw3LjYzMS0yMC4zLTMuODc1LTMyLjY5IDguMjc4LTEyLjQ3OWMxLjU0MS0yLjY3MyAxLjIyNS02LjA5NC0wLjk0OC04LjQ2MnoiLz4KICA8L2c+Cjwvc3ZnPgo="   alt="Mountains" style="width:65%">
+                        <strong style="font-size: 6pt">  <br>Supervisor</strong> </label>
+                      
+                    </div>
+                    
+                  </section>
+				<br>
+				  <div style="text-align: left; color: black;">
+					<strong> User Name :</strong> 
+				<input type="text" placeholder="User Name" />
+				<strong>Password :</strong>
+				<input type="password" placeholder="Password" /></div>
+			<br>
+				<button>Login</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<a href="#" style="position:left "> <img src="{%static 'seniorapp/images/logoo3.png' %}" alt="" >
+					</a>
+					<h1 style="color: white;">Welcome to ITS</h1>
+					
+					<h20>Industrial Training System assist University of Bahrain students regarding thier internship course.<br><br> Get the opportunity to train UOB students at your company.</h20>
+					<div><strong><br>intrested to join ITS? </strong><a href="www.google.com" > <br> ITS Company Registartion</a></div>
+   
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	
+		  
+		  
+	<div class="footer">
+
+		<br><br>
+		<m>Copyright &copy;2021 All rights reserved. Industrial Training System</m>
+            <br><br>
+	  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{%static 'seniorapp/jquery/jquery.min.js' %}"></script>
+  <script src="{%static 'seniorapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+  </html>
