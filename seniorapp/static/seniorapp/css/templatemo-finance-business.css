@@ -580,7 +580,7 @@ body {
   
   .fun-facts {
 	  margin-top: 140px;
-	  background-image: url(../images/fun-facts-bg.jpg);
+	  background-image: url(../images/black.jpg);
 	  background-position: center center;
 	  background-repeat: no-repeat;
 	  background-size: cover;
@@ -1336,4 +1336,16 @@ body {
 		  color: #003D7a!important;
 		  border-bottom: none!important;
 	  }
+  }
+  	.footer {
+	position:none;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 20px;;
+	background-color:  #343434;
+	color: white;
+	text-align: center;
+	font-size: 10pt;
+  
   }
