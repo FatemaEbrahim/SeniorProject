@@ -1,1 +1,118 @@
-Evaluation
+
+{% extends 'seniorapp/TryTemplate.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+       
+<!-- Bootstrap core CSS -->
+<link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+
+<link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
+<link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
+<link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
+  <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
+</head>
+
+  <head>
+    <title>Evaluation</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/Evaluation.css' %}">
+  </head>
+  <body>
+    <br><br><br><br><br><br>
+    <div class="testbox">
+      <form action="/">
+       
+        
+        <h1>Trainee Evaluation Form</h1>
+        <p>Based upon your experience, observations of, and interactions with students, please rate them according to the following learning outcomes.
+            Rating Scheme: 1 Poor 2 Average 3 Good 4 Very good 5 Excellent N.A. Not Applicable</p>
+        <hr />
+        <h3>Overall experience with the trainee</h3>
+        <table>
+          <tr>
+            <th class="first-col"></th>
+            <th>Very Good</th>
+            <th>Good</th>
+            <th>Fair</th>
+            <th>Poor</th>
+            <th>Very Poor</th>
+            <th>N.A</th>
+          </tr>
+          <tr>
+            <td class="first-col">How would you rate your overall experience with our service?</td>
+            <td><input type="radio" value="none" name="rate" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the comprehensiveness of our offer?</td>
+            <td><input type="radio" value="none" name="satisfied" /></td>
+            <td><input type="radio" value="none" name="satisfied" /></td>
+            <td><input type="radio" value="none" name="satisfied" /></td>
+            <td><input type="radio" value="none" name="satisfied" /></td>
+            <td><input type="radio" value="none" name="satisfied" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">How would you rate our prices?</td>
+            <td><input type="radio" value="none" name="prices" /></td>
+            <td><input type="radio" value="none" name="prices" /></td>
+            <td><input type="radio" value="none" name="prices" /></td>
+            <td><input type="radio" value="none" name="prices" /></td>
+            <td><input type="radio" value="none" name="prices" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the timeliness of order delivery?</td>
+            <td><input type="radio" value="none" name="timeliness" /></td>
+            <td><input type="radio" value="none" name="timeliness" /></td>
+            <td><input type="radio" value="none" name="timeliness" /></td>
+            <td><input type="radio" value="none" name="timeliness" /></td>
+            <td><input type="radio" value="none" name="timeliness" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the customer support?</td>
+            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="name" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Would you recommend our product / service to other people?</td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+        </table>
+        <h4>What should we change in order to live up to your expectations?</h4>
+        <textarea rows="5"></textarea>
+        <h4>Email</h4>
+        <small>Only if you want to hear more from us.</small>
+        <input class="email" type="text" name="name" />
+        <div class="btn-block">
+          <button type="submit" href="/">Send Feedback</button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+{% endblock %}
+		</html>

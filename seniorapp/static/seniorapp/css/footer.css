@@ -1,0 +1,48 @@
+.footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  #343434;
+    color: white;
+    text-align: center;
+    
+  
+  }
+
+
+
+
+footer h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    margin-bottom: 35px;
+}
+footer p {
+    color: #fff;
+}
+
+footer ul.social-icons {
+    margin-top: 25px;
+}
+
+
+/* Sub-footer Style */
+
+.sub-footer {
+    background-color: #343434;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.sub-footer p {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.sub-footer a {
+    color: #fff;
+}

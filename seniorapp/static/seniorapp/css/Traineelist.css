@@ -1,11 +1,10 @@
-<style>
-    /*!
+ /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -174,7 +173,8 @@ svg {
   vertical-align: middle; }
 
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  border: solid #EFEFEF 3px; }
 
 caption {
   padding-top: 0.75rem;
@@ -1419,7 +1419,8 @@ pre {
   border-color: #8fd19e; }
 
 .table-hover .table-success:hover {
-  background-color: #b1dfbb; }
+  background-color: #b1dfbb;
+}
   .table-hover .table-success:hover > td,
   .table-hover .table-success:hover > th {
     background-color: #b1dfbb; }
@@ -1529,7 +1530,27 @@ pre {
   color: #495057;
   background-color: #e9ecef;
   border-color: #dee2e6; }
-
+  .table-sortable th {
+    cursor: pointer;
+  }
+  
+  .table-sortable .th-sort-asc::after {
+    content: "\25b4";
+  }
+  
+  .table-sortable .th-sort-desc::after {
+    content: "\25be";
+  }
+  
+  .table-sortable .th-sort-asc::after,
+  .table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+  }
+  
+  .table-sortable .th-sort-asc,
+  .table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.1);
+  }
 .table-dark {
   color: #fff;
   background-color: #343a40; }
@@ -1588,6 +1609,7 @@ pre {
   -webkit-overflow-scrolling: touch; }
   .table-responsive > .table-bordered {
     border: 0; }
+    
 
 .form-control {
   display: block;
@@ -1598,7 +1620,7 @@ pre {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: #ced4da;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -8163,7 +8185,7 @@ h1, h2, h3, h4, h5,
   background: #40bfc1 !important; }
 
 .ftco-section {
-  padding: 7em 0; }
+  padding: 4em 0; }
 
 .ftco-no-pt {
   padding-top: 0; }
@@ -8172,7 +8194,11 @@ h1, h2, h3, h4, h5,
   padding-bottom: 0; }
 
 .heading-section {
+  padding: 10px;
+  width: 100%;
+
   font-size: 28px;
+
   color: #000; }
 
 .img {
@@ -8205,7 +8231,7 @@ h1, h2, h3, h4, h5,
       border-bottom: 0; }
   .table tbody th, .table tbody td {
     border: none;
-    padding: 30px;
+    padding:15px;
     font-size: 14px;
     background: #fff;
     vertical-align: middle; }
@@ -8228,7 +8254,9 @@ h1, h2, h3, h4, h5,
       background: #23bd5a; }
   .table tbody td.status .waiting {
     background: #fdf5dd;
-    color: #cfa00c; }
+    color: #cfa00c; 
+    
+ }
     .table tbody td.status .waiting:after {
       background: #f2be1d; }
   .table tbody td .img {
@@ -8299,170 +8327,16 @@ h1, h2, h3, h4, h5,
   .checkbox-primary input:checked ~ .checkmark:after {
     color: #40bfc1; }
 
-</style>
-
-
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-  	<title>Table 05</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="css/style.css">
-
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Table #05</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="table-wrap">
-						<table class="table table-responsive-xl">
-						  <thead>
-						    <tr>
-						    	<th>&nbsp;</th>
-						    	<th>Email</th>
-						      <th>Username</th>
-						      <th>Status</th>
-						      <th>&nbsp;</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox" checked>
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						      <td class="d-flex align-items-center">
-						      	<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-						      	<div class="pl-3 email">
-						      		<span>markotto@email.com</span>
-						      		<span>Added: 01/03/2020</span>
-						      	</div>
-						      </td>
-						      <td>Markotto89</td>
-						      <td class="status"><span class="active">Active</span></td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						      <td class="d-flex align-items-center">
-						      	<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-						      	<div class="pl-3 email">
-						      		<span>jacobthornton@email.com</span>
-						      		<span>Added: 01/03/2020</span>
-						      	</div>
-						      </td>
-						      <td>Jacobthornton</td>
-						      <td class="status"><span class="waiting">Waiting for Resassignment</span></td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						      <td class="d-flex align-items-center">
-						      	<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-						      	<div class="pl-3 email">
-						      		<span>larrybird@email.com</span>
-						      		<span>Added: 01/03/2020</span>
-						      	</div>
-						      </td>
-						      <td>Larry_bird</td>
-						      <td class="status"><span class="active">Active</span></td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						      <td class="d-flex align-items-center">
-						      	<div class="img" style="background-image: url(images/person_4.jpg);"></div>
-						      	<div class="pl-3 email">
-						      		<span>johndoe@email.com</span>
-						      		<span>Added: 01/03/2020</span>
-						      	</div>
-						      </td>
-						      <td>Johndoe1990</td>
-						      <td class="status"><span class="active">Active</span></td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-						    <tr class="alert" role="alert">
-						    	<td class="border-bottom-0">
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						      <td class="d-flex align-items-center border-bottom-0">
-						      	<div class="img" style="background-image: url(images/person_1.jpg);"></div>
-						      	<div class="pl-3 email">
-						      		<span>garybird@email.com</span>
-						      		<span>Added: 01/03/2020</span>
-						      	</div>
-						      </td>
-						      <td class="border-bottom-0">Garybird_2020</td>
-						      <td class="status border-bottom-0"><span class="waiting">Waiting for Resassignment</span></td>
-						      <td class="border-bottom-0">
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-						  </tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-
-	</body>
-</html>
-
+    .bootstrap-select .dropdown-toggle .filter-option {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: inherit;
+      padding-right: inherit;
+      padding-bottom: inherit;
+      padding-left: inherit;
+      height: 100%;
+      width: 100%;
+      text-align: left;
+  }
+  

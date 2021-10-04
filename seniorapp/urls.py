@@ -20,5 +20,6 @@ urlpatterns = [
     path('companyregistration.html', views.companyregistration, name='companyregistration' ),
     path('companyprofile.html', views.companyprofile, name='companyprofile' ),
     path('superevisorevaluation.html', views.superevisorevaluation, name='superevisorevaluation' ),
-    path('Register.html', views.Register, name='Register' )
+    path('Register.html', views.Register, name='Register' ),
+    path('TryTemplate.html', views.TryTemplate, name='TryTemplate' )
 ]

@@ -59,4 +59,7 @@ def superevisorevaluation(request):
     return render (request ,'seniorapp\superevisorevaluation.html')   
 
 def Register(request):
-    return render (request ,'seniorapp\Register.html')                           
+    return render (request ,'seniorapp\Register.html') 
+
+def TryTemplate(request):
+    return render (request ,'seniorapp\TryTemplate.html')                              
