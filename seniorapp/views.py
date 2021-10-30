@@ -205,3 +205,17 @@ def test_logout(request):
 #     # user.is_authenticated
 #     logout(request)
 #     return render (request ,'seniorapp\\test_home.html', {'user':request.user})
+    return render (request ,'seniorapp\TryTemplate.html')
+
+def companieslist(request): 
+    return render (request ,'seniorapp\companieslist.html')
+
+def coordinatorprofile(request):
+    return render (request ,'seniorapp\coordinatorprofile.html')  
+
+def TraineedetailsSupervisor(request):
+    return render (request ,'seniorapp\TraineedetailsSupervisor.html')   
+
+def Traineelistsupervisor(request):
+    return render (request ,'seniorapp\Traineelistsupervisor.html')       
+                                              

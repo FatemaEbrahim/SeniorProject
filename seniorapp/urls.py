@@ -26,4 +26,10 @@ urlpatterns = [
     path('', views.home_test, name='home' ),
     path('test_login', views.test_login, name='login' ),
     path('test_logout', views.test_logout, name='logout' ),
+    path('TryTemplate.html', views.TryTemplate, name='TryTemplate' ), 
+    path('companieslist.html', views.companieslist, name='companieslist' ),
+    path('coordinatorprofile.html', views.coordinatorprofile, name='coordinatorprofile' ),
+    path('TraineedetailsSupervisor.html', views.TraineedetailsSupervisor, name='TraineedetailsSupervisor' ),
+    path('Traineelistsupervisor.html', views.Traineelistsupervisor, name='Traineelistsupervisor' ),
+    
 ]
