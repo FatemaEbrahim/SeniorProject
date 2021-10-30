@@ -1,309 +1,401 @@
+{% extends 'seniorapp/TryTemplate.html' %}
 {% load static %}
-<!DOCTYPE html>
+{% block content %}
+<!Doctype html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>Finance Business - Contact Page</title>
-
+    <title>Companies</title>
+    <link rel="icon" href="https://mkfbh.org/wp-content/uploads/2021/04/logo-uob.png" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-   <!-- Additional CSS Files -->
-   <link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
-   <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
-   <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
-     <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
-<!--
 
-Finance Business TemplateMo
+    <!-- Additional CSS Files -->
 
-https://templatemo.com/tm-545-finance-business
+    <link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
 
--->
-  </head>
+    <link rel="stylesheet" href="{%static 'seniorapp/css/companies.css' %}">
+  
+    <link rel="stylesheet" href="{%static 'seniorapp/css/plugins.css' %}">
+	<link rel="stylesheet" href="{%static 'seniorapp/css/common.css' %}">
+  <link rel="stylesheet" href="{%static 'seniorapp/css/main.css' %}">
+  <link rel="stylesheet" href="{%static 'seniorapp/css/Recommendation.css' %}">
+</head>
 
-  <body>
+<body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
 
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-17:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="login.html"><h2>Finance Business</h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <section class="ftco-section" style="background-color: white;">
 
-    <!-- Page Content -->
-    <div class="page-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Contact Us</h1>
-            <span>feel free to send us a message now!</span>
-          </div>
-        </div>
-      </div>
-    </div>
+        <head>
 
-    <div class="contact-information">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-phone"></i>
-              <h4>Phone</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">090-080-0760</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-envelope"></i>
-              <h4>Email</h4>
-              <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.</p>
-              <a href="#">info@company.com</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-item">
-              <i class="fa fa-map-marker"></i>
-              <h4>Location</h4>
-              <p>1020 New Mountain Street<br>Forest Park, FP 11220</p>
-              <a href="#">View on Google Maps</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <div class="callback-form contact-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Send us a <em>message</em></h2>
-              <span>Suspendisse a ante in neque iaculis lacinia</span>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="contact-form">
-              <form id="contact" action="" method="get">
-                <div class="row">
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
+            <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet'
+                type='text/css'>
+
+            <link rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <link rel="stylesheet" href="css/style.css">
+
+        </head>
+
+        <body>
+            <section class="jobs">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="heading-section">
+                            <div class="request-form" style="background-color: #efefef4f; border:solid #EFEFEF">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3> Training Companies</h3>
+
+                                        </div>
+                                        <div>
+                                            <br>
+                                            <form >
+                                                <fieldset>
+                                                  <div class="col-md-4 col-sm-4 no-pad">
+                                                      
+                                                    <input type="text" class="form-control border-right" placeholder="Search "style="height: 45px;">
+                                                  </div>
+                                                  <div class="col-md-3 col-sm-3 no-pad">
+                                                    <select class="selectpicker border-right" style="height: 45px;">
+                                                      <option>Department</option>
+                                                      <option>Department of Information Systems</option>
+                                                      <option>Department of Computer Science</option>
+                                                      <option>Department of Computer Engineering</option>
+                                                      <option>Department of Chemistry</option>
+                                                      <option>Department of Physics</option>
+                                                    </select>
+                                                  </div>
+                                                  <div class="col-md-3 col-sm-3 no-pad">
+                                                    <select class="selectpicker" style="height: 45px;" >
+                                                      <option>College</option>
+                                                      <option>College of applied studies </option>
+                                                      <option>Bahrain teachers college</option>
+                                                      <option>College of engineering </option>
+                                                      <option>College of information technology </option>
+                                                      <option>College of science </option>
+                                                      <option>College of arts</option>
+                                                      <option>College of business adminstration </option>
+                                                      <option>College of health and sport sciences</option>
+                                                      <option>College of law</option>
+                                                    </select>
+                                                  </div>
+                                                  <div class="col-md-2 col-sm-2 no-pad">
+                                                    <input type="submit" class="btn seub-btn" value="submit" style="  float:left; height: 45px;  border: 0px; background-color: #2460ed; color:#fff;  ">
+                                                  </div>
+                                                </fieldset>
+                                              </form>
+                                          <!--  <input id='myInput' onkeyup='searchH3()' placeholder="Search" type='text'
+                                                style="height: 60%;width: 200%; font-size: small;">
+                                                -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="map">
-<!-- How to change your own map point
-	1. Go to Google Maps
-	2. Click on your location point
-	3. Click "Share" and choose "Embed map" tab
-	4. Copy only URL and paste it within the src="" field below
--->
-      <iframe src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-
-    <div class="partners contact-partners">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="owl-partners owl-carousel">
-              <div class="partner-item">
-                <img src="{%static 'seniorapp/images/client-01.png' %}" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Footer Starts Here -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>Finance Business</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-              <li><a href="#">Lacinia ac sapien</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">How We Work</a></li>
-              <li><a href="#">Quick Support</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
                 </div>
-              </form>
+                </div>
+                </div>
+                <div class="container">
+                     
+     
+                    <div class="companies" id="companies">
+                        <div class="company-list">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+
+                                    <div class="company-logo">
+
+                                        <img src="{%static 'seniorapp\images\more-info.jpg' %}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <div class="company-content">
+                                        <h3>NBB</h3>
+                                        <p>We are always on the look out for talented individuals who want to have a
+                                            challenging and rewarding career in one of the most successful financial
+                                            services institutions in the Kingdom.
+                                            
+                                            <button onclick="getCompanyDetailsModal('NBB')"
+                                            style="background: none!important; border: none; padding: 0!important; color: #2460ed; cursor: pointer;">
+                                            More Details </button>
+                                        </p>
+                                        
+                                        &nbsp;<button type="button"
+                                            style="background-color: #2460ed; color: #EFEFEF; border: #EFEFEF;  float: right; border-radius: 25px;">
+                                            &nbsp;Request Recommendation &nbsp;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="company-list">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="company-logo">
+                                        <img src="{%static 'seniorapp\images\ICS.png' %}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <div class="company-content">
+                                        <h3>ICS</h3>
+                                        <p>ICS specifically chose to develop in the field of e-commerce since we are in
+                                            the era of the technological boom and we are currently within a fast-passed
+                                            world.
+                                            <button onclick="getCompanyDetailsModal('')"
+                                            style="background: none!important; border: none; padding: 0!important; color: #2460ed; cursor: pointer;">
+                                            More Details </button>
+                                        </p>
+                                        <button type="button"
+                                            style="background-color: #2460ed; color: #EFEFEF; border: #EFEFEF;  float: right; border-radius: 25px;">
+                                            &nbsp;Request Recommendation &nbsp;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="company-list">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="company-logo">
+                                        <img src="{%static 'seniorapp\images\Homiez.jpg' %}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <div class="company-content">
+                                        <h3>Homiez</h3>
+                                        <p>Homiez is an innovative, comprehensive e-commerce platform focuses on vendor
+                                            visibility offering easy access to daily related services and products
+                                            within the same reach.
+                                            <button onclick="getCompanyDetailsModal('')"
+                                            style="background: none!important; border: none; padding: 0!important; color: #2460ed; cursor: pointer;">
+                                            More Details </button>
+                                        </p>
+                                        <button type="button"
+                                            style="background-color: #2460ed; color: #EFEFEF; border: #EFEFEF;  float: right; border-radius: 25px;">
+                                            &nbsp;Request Recommendation &nbsp;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="company-list">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <div class="company-logo">
+                                        <img src="{%static 'seniorapp\images\Ministry.jpg' %}" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <div class="company-content">
+                                        <h3>Ministry of Housing</h3>
+                                        <p>Provide the best types of housing services suitable for citizens with low
+                                            incomes to ensure their stability and achieve a decent livelihood
+                                            <button onclick="getCompanyDetailsModal('')"
+                                            style="background: none!important; border: none; padding: 0!important; color: #2460ed; cursor: pointer;">
+                                            More Details </button>
+                                        </p>
+                                        <button type="button"
+                                            style="background-color: #2460ed; color: #EFEFEF; border: #EFEFEF;  float: right; border-radius: 25px;">
+                                            &nbsp;Request Recommendation &nbsp;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+
+
+
+
+            <script src="./src/tablesort.js"></script>
+        </body>
+
+
+        <script>
+            function searchH3() {
+                // Declare variables
+                var input, filter, ul, h3, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("companies");
+                h3 = ul.getElementsByTagName('h3');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < h3.length; i++) {
+                    // a = h3[i].getElementsByTagName("a")[0];
+                    txtValue = h3[i].textContent || h3[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        h3[i].closest('.company-list').style.display = "";
+                    } else {
+                        h3[i].closest('.company-list').style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+
+        <div class="company-content modal" id="NBB">
+            <div class="modal-content">
+                <div class="contact-information" style="margin-top: 10px;">
+                <button class="close" onclick="closeModal('NBB')" >&times;</button>
+
+                <div  style="padding: 20px;; background-color: #efefef4f; text-align: center; ">
+                    <div class="company-logo">
+
+                        <img src="{%static 'seniorapp\images\more-info.jpg' %}" />
+                    </div>
+                    <br>
+                    <h4>National Bank of Bahrain</h4>
+                    <p>We are always on the look out for talented individuals who want to have a
+                        challenging and rewarding career in one of the most successful financial
+                        services institutions in the Kingdom.
+                    </p>
+                </div>
+                </div>
+                <div class="contact-information" style="margin-top: 10px;">
+                    <h5>Requirements Needed:</h5>
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fa fa-users"></i>
+                                    <h6>High Communication Skills</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fa fa-globe"></i>
+                                    <h6>Fluent in Arabic and English </h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fa fa-line-chart"></i>
+                                    <h6>GPA more than 3 </h6>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <!--"fa fa-map-marker"-->
+                                    <i class="fa fa-flag"></i>
+                                    <h6>Bahraini Citizen</h6>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-information" style="margin-top: 10px; ">
+                            <h5>For inquiries:</h5>
+                                <div class="row">
+                                    <div class="col-md-12" style="height: 15%;">
+                                        <div class="contact-item" style="padding: 10;">
+                                            <br>
+                                            <i class="fa fa-envelope" style="font-size:24px"></i><a href="#">
+                                                nbb@nbbonline.com</a>
+                                            <br>
+                                            <i class="fa fa-phone" style="font-size:24px"></i> <a href="#">
+                                                17214433</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="align-items: center; justify-content: center; text-align: center;">
+                    <button  type="button" style="background-color: #2460ed;  color: #EFEFEF; border: #EFEFEF;  ">
+                        &nbsp;Apply &nbsp;</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Copyright &copy; 2020 Financial Business Co., Ltd.
-            
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{%static 'seniorapp/jquery/jquery.min.js' %}"></script>
-    <script src="{%static 'seniorapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script>
 
-    <!-- Additional Scripts -->
-    <script src="{%static 'seniorapp/js/custom.js' %}"></script>
-    <script src="{%static 'seniorapp/js/owl.js' %}"></script>
-    <script src="{%static 'seniorapp/js/slick.js' %}"></script>
-    <script src="{%static 'seniorapp/js/accordions.js' %}"></script>
 
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
 
-  </body>
+            // // Get the <span> element that closes the modal
+            // var span = document.getElementsByClassName("close")[0];
+
+
+            // // When the user clicks on <span> (x), close the modal
+            // span.onclick = function () {
+            //     modal = document.getElementsByClassName("modal");
+            //     modal.style.display = "none";
+            // }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            function closeModal(id) {
+
+                // Get the modal
+                modal = document.getElementById(id);
+                modal.style.display = "none";
+
+
+            }
+            function getCompanyDetailsModal(id) {
+
+                // Get the modal
+                modal = document.getElementById(id);
+                modal.style.display = "block";
+
+
+            }
+
+        </script>
+
+
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
+
+</body>
+<nav aria-label="Page navigation example" >
+    <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="Traineedetails.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
 </html>

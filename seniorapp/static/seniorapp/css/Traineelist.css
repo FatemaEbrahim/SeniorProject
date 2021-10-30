@@ -4797,12 +4797,13 @@ a.close.disabled {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display:flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
+  scroll-behavior: auto;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
