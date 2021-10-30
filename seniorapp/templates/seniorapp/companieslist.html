@@ -1,0 +1,823 @@
+
+{% extends 'seniorapp/TryTemplate.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<!doctype html>
+
+<html lang="en">
+	
+  <head>
+	  
+  	<title>Companies List</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+	
+	<link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
+    <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
+      <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
+
+   
+    <link rel="stylesheet" href="{%static 'seniorapp/css/Traineelist.css' %}">
+   
+	</head>
+
+	<body>
+		    
+	
+	<section class="ftco-section" style="background-color: white;">
+	
+		  <head>
+			  
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+			<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+		
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			
+			<link rel="stylesheet" href="css/style.css">
+		
+			</head>
+			<body>
+				<!-- style="background-color: #EFEFEF; width: 100%; height: 150%;background-position: left;  text-align: left;"-->
+			<section class="ftco-section" >
+				<div class="container">
+					<div class="row justify-content-center">
+					<div class="heading-section" > 
+					
+					
+							<div class="request-form" style="background-color: #efefef4f; border:solid #EFEFEF">
+								<div class="container">
+								  <div class="row">
+									<div class="col-md-8">
+									  <h3> Companies List</h3>
+									  
+									</div>
+									<div>
+										
+									<input  id='myInput' onkeyup='searchTable()' placeholder="Search"   type='text' style="height: 60%;width: 200%; font-size: small;"></div>
+								  </div>
+								</div>
+							  </div>
+					</div>
+					
+				</div>
+					<div class="row" >
+						<div class="col-md-12">
+							<div class="table-wrap">
+								<br>
+							
+							<div style="text-align: right;">
+							<br><a href="#"><img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-add-mintab-for-ios-becris-lineal-becris-2.png" style="height: 25px; width:25px" /></a></div>
+								<table id='myTable' class="table-sortable table table-responsive-xl">
+								  <thead>
+									<tr>
+										<th>&nbsp;</th>
+										<th >Company Name</th>
+									  <th>Company Email</th>
+									  <th >Supervisor Name</th>
+                                      <th >Supervisor Email</th>
+									  <th >Mobile Number</th>
+									  <th >No. of Trainees</th>
+									  
+									  
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr class="alert" role="alert">
+										<td>
+											1
+										<!--<label class="checkbox-wrap checkbox-primary">
+												  <input type="checkbox" checked>
+												  <span class="checkmark"></span>
+												</label>
+										</td>-->
+									  <td >
+										 
+										  
+											  National Bank of Bahrain
+										
+									  </td>
+									  <td>Nationalbank@nbb.com</td>
+									  <td>Hasan Ali Mohammed</td>
+									  <td>Hasanam@nbb.com</td>
+									  <td >36579218</td>
+									  <td>
+										  3
+									</td>
+									</tr>
+									<!-- Row 2-->
+                                    <tr class="alert" role="alert">
+										<td>
+											2
+										
+									  <td >
+										 
+										  
+											 Imagination Country Computer Sulotions
+										
+									  </td>
+									  <td>imaginationsolutions@ics.com</td>
+									  <td>Abdulla Zain Moftah</td>
+									  <td>Abdullamuftah@ics.bh</td>
+									  <td >66381576</td>
+									  <td>
+										  1
+									</td>
+									</tr>
+									<!-- Row 3-->
+									<tr class="alert" role="alert">
+										<td>
+											3
+										
+									  <td >
+										 
+										  
+											 Homiez
+										
+									  </td>
+									  <td>Homiezmanagment@Homiez.com</td>
+									  <td>Hussain Isa Kadhem</td>
+									  <td>HKadhem@homiez.bh</td>
+									  <td >36624831</td>
+									  <td>
+										 5
+									</td>
+									</tr>
+									<!--Row 4-->
+									<tr class="alert" role="alert">
+										<td>
+											2
+										
+									  <td >
+										 
+										  
+											 Ministiry of Housing
+										
+									  </td>
+									  <td>Managment@moh.bah</td>
+									  <td>Abdulhameed Abdulla Ghanem</td>
+									  <td>AbdullaG@moh.bah</td>
+									  <td >369531486</td>
+									  <td>
+										  6
+									</td>
+									</tr>
+									<!--Row 5-->
+									<tr class="alert" role="alert">
+										<td>
+									5
+									  <td >
+										 
+										Hussain Ali Faisal
+										
+									  </td>
+									  <td>20170003</td>
+									  <td>HusainiAliff@email.com</td>
+									  <td>33681957</td>
+									  <td class="status"><span class="Active"> Active  </span></td>
+									  <td>
+										  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+									  </button>
+									</td>
+									</tr>
+									<!--Row 6-->
+									<tr class="alert" role="alert">
+										<td>
+									6
+									  <td >
+										 
+										Aysha Mohammed Ali
+										
+									  </td>
+									  <td>20171111</td>
+									  <td>AyooshAli17@gmail.com</td>
+									  <td>39642846</td>
+									  <td class="status"><span class="Active"> Active  </span></td>
+									  <td>
+										  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+									  </button>
+									</td>
+									</tr>
+										<!--Row 7-->
+										<tr class="alert" role="alert">
+											<td>
+										7
+										  <td >
+											 
+											Reem Hasan Ali
+											
+										  </td>
+										  <td>20173091</td>
+										  <td>Reema57@gmail.com</td>
+										  <td>33548612</td>
+										  <td class="status"><span class="Active"> Active  </span></td>
+										  <td>
+											  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+										  </button>
+										</td>
+										</tr>
+											<!--Row 8-->
+											<tr class="alert" role="alert">
+												<td>
+											8
+											  <td >
+												 
+												Ameena Sameer Haji
+												
+											  </td>
+											  <td>20173200</td>
+											  <td>Ammenasameer@gmail.com</td>
+											  <td>33586458</td>
+											  <td class="status"><span class="Active"> Active  </span></td>
+											  <td>
+												  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+											  </button>
+											</td>
+											</tr>
+											<!--Row 9-->
+											<tr class="alert" role="alert">
+												<td>
+											9
+											  <td >
+												 
+												Mohammed Yousif khalil
+												
+											  </td>
+											  <td>20179092</td>
+											  <td>mohdyousif@gmail.com</td>
+											  <td>39458564</td>
+											  <td class="status"><span class="Active"> Active  </span></td>
+											  <td>
+												  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+											  </button>
+											</td>
+											</tr>
+								  </tbody>
+								</table>
+							</table>
+							<script>
+									function searchTable() {
+										var input, filter, found, table, tr, td, i, j;
+										input = document.getElementById("myInput");
+										filter = input.value.toUpperCase();
+										table = document.getElementById("myTable");
+										tr = table.getElementsByTagName("tr");
+										for (i = 0; i < tr.length; i++) {
+											td = tr[i].getElementsByTagName("td");
+											for (j = 0; j < td.length; j++) {
+												if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+													found = true;
+												}
+											}
+											if (found) {
+												tr[i].style.display = "";
+												found = false;
+											} else {
+												tr[i].style.display = "none";
+											}
+										}
+									}
+									</script>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			
+		
+			  
+			  
+				<script src="./src/tablesort.js"></script>
+			  </body>
+<script>
+	/**
+ * Sorts a HTML table.
+ * 
+ * @param {HTMLTableElement} table The table to sort
+ * @param {number} column The index of the column to sort
+ * @param {boolean} asc Determines if the sorting will be in ascending
+ */
+function sortTableByColumn(table, column, asc = true) {
+    const dirModifier = asc ? 1 : -1;
+    const tBody = table.tBodies[0];
+    const rows = Array.from(tBody.querySelectorAll("tr"));
+
+    // Sort each row
+    const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+
+        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+    });
+
+    // Remove all existing TRs from the table
+    while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+    }
+
+    // Re-add the newly sorted rows
+    tBody.append(...sortedRows);
+
+    // Remember how the column is currently sorted
+    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+}
+
+document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+    headerCell.addEventListener("click", () => {
+        const tableElement = headerCell.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+        sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+    });
+});
+
+</script>		  
+			<script src="js/jquery.min.js"></script>
+		  <script src="js/popper.js"></script>
+		  <script src="js/bootstrap.min.js"></script>
+		  <script src="js/main.js"></script>
+	
+		<!--<style>  
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);  
+		 a {  
+		   color: white;  
+		 }  
+		 body {  
+		   background-color: #222;  
+		   font-family: 'Open Sans', sans-serif;  
+		   text-align: center;  
+		   color: white;  
+		   line-height: 1.4;  
+		   font-size: 18px;  
+		   word-spacing: .125em;  
+		 }  
+		 .table-wrapper {  
+		   width: 70%;  
+		   margin: 0 auto;  
+		 }  
+		 .floatThead-container {  
+		   margin-top: -2px !important;  
+		 }  
+		 table {  
+		   width: 100%;  
+		   text-align: left;  
+		   border-collapse: separate;  
+		   border-spacing: 0 2px;  
+		 }  
+		 th,  
+		 td {  
+		   padding: .25em;  
+		   text-align: right;  
+		 }  
+		 th:hover {  
+		   cursor: pointer  
+		 }  
+		 th {  
+		   background-color: #222;  
+		 }  
+		 td {  
+		   background: rgba(0, 0, 0, .2);  
+		   border-color: rgba(0, 0, 0, .3);  
+		   border-width: 1px 0;  
+		   border-style: solid;  
+		 }  
+		 td:first-child {  
+		   border-width: 1px 0 1px 1px;  
+		 }  
+		 td:last-child {  
+		   border-width: 1px 1px 1px 0;  
+		 }  
+		 tr:nth-child(even) td {  
+		   background: rgba(0, 0, 0, .4);  
+		 }  
+		 .league__pos,  
+		 .league__team {  
+		   text-align: left  
+		 }  
+		 .league__team,  
+		 .league__points {  
+		   font-weight: bold;  
+		 }  
+		   
+		 .league__champs td {  
+		   background: rgba(5, 100, 5, .5);  
+		 }  
+		 tr.league__relegated td {  
+		   background: rgba(100, 5, 5, .7);  
+		 }  
+		 th.headerSortDown:after {  
+		   content: "?"  
+		 }  
+		 th.headerSortUp:after {  
+		   content: "?"  
+		 }  
+		 </style>  
+		 </head>  
+		 <body>  
+		 <h1 align="center"> Example </h3>            
+		 <h3 align="center"> <span> Sort table data in HTML using JavaScript </span> </h3>    
+		 Filter by <label for="areaFilter"> area: </label> <select class="js-filter-drop" data-target="data-area" name="areaFilter" id="areaFilter">  
+		  <option value="0">Any</option>  
+		   <option value="North West">North West</option>  
+		   <option value="North East">North East</option>  
+		   <option value="Midlands">Midlands</option>  
+		   <option value="London">London</option>  
+		   <option value="South">South</option>  
+		   <option value="Other">Other</option>  
+		 </select> | <label for="colourFilter">team colour:</label> <select class="js-filter-drop" data-target="data-colour" name="colourFilter" id="colourFilter"><option value="0">Any</option>  
+						   <option value="blue">Blue</option>  
+						   <option value="red">Red</option>  
+						   <option value="white">White</option>  
+						   <option value="yellow">Yellow</option>  
+						   <option value="claret">Claret & Blue</option>  
+						 </select>   
+		 <div class="table-wrapper">  
+		   <table id="js-sort-table" class="league">  
+			 <thead>  
+			   <tr>  
+				 <th class="league__pos">Pos</th>  
+				 <th class="league__team">Team</th>  
+				 <th>Pl</th>  
+				 <th>W</th>  
+				 <th>D</th>  
+				 <th>L</th>  
+				 <th>F</th>  
+				 <th>A</th>  
+				 <th>GD</th>  
+				 <th>Pts</th>  
+			   </tr>  
+			 </thead>  
+			 <tbody>  
+			   <tr class="league__champs" data-colour="blue" data-area="North West">  
+				 <td class="league__pos">1.</td>  
+				 <td class="league__team">Everton</td>  
+				 <td>42</td>  
+				 <td>26</td>  
+				 <td>8</td>  
+				 <td>8</td>  
+				 <td>76</td>  
+				 <td>31</td>  
+				 <td class="league__gd">+45</td>  
+				 <td class="league__points">86</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="North West">  
+				 <td class="league__pos">2.</td>  
+				 <td class="league__team">Liverpool</td>  
+				 <td>42</td>  
+				 <td>23</td>  
+				 <td>8</td>  
+				 <td>11</td>  
+				 <td>72</td>  
+				 <td>42</td>  
+				 <td class="league__gd">+30</td>  
+				 <td class="league__points">77</td>  
+			   </tr>  
+			   <tr data-colour="white" data-area="London">  
+				 <td class="league__pos">3.</td>  
+				 <td class="league__team">Tottenham Hotspur</td>  
+				 <td>42</td>  
+				 <td>21</td>  
+				 <td>8</td>  
+				 <td>13</td>  
+				 <td>68</td>  
+				 <td>43</td>  
+				 <td class="league__gd">+25</td>  
+				 <td class="league__points">71</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="London">  
+				 <td class="league__pos">4.</td>  
+				 <td class="league__team">Arsenal</td>  
+				 <td>42</td>  
+				 <td>20</td>  
+				 <td>10</td>  
+				 <td>12</td>  
+				 <td>58</td>  
+				 <td>35</td>  
+				 <td class="league__gd">+23</td>  
+				 <td class="league__points">70</td>  
+			   </tr>  
+			   <tr data-colour="yellow" data-area="Other">  
+				 <td class="league__pos">5.</td>  
+				 <td class="league__team">Norwich City</td>  
+				 <td>42</td>  
+				 <td>17</td>  
+				 <td>17</td>  
+				 <td>8</td>  
+				 <td>53</td>  
+				 <td>51</td>  
+				 <td class="league__gd">+2</td>  
+				 <td class="league__points">68</td>  
+			   </tr>  
+			   <tr data-colour="blue" data-area="London">  
+				 <td class="league__pos">6.</td>  
+				 <td class="league__team">Wimbledon</td>  
+				 <td>42</td>  
+				 <td>19</td>  
+				 <td>9</td>  
+				 <td>14</td>  
+				 <td>57</td>  
+				 <td>50</td>  
+				 <td class="league__gd">+7</td>  
+				 <td class="league__points">66</td>  
+			   </tr>  
+			   <tr data-colour="white" data-area="London">  
+				 <td class="league__pos">7.</td>  
+				 <td class="league__team">Luton Town</td>  
+				 <td>42</td>  
+				 <td>18</td>  
+				 <td>12</td>  
+				 <td>12</td>  
+				 <td>47</td>  
+				 <td>45</td>  
+				 <td class="league__gd">+2</td>  
+				 <td class="league__points">66</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="Midlands">  
+				 <td class="league__pos">8.</td>  
+				 <td class="league__team">Nottingham Forest</td>  
+				 <td>42</td>  
+				 <td>18</td>  
+				 <td>11</td>  
+				 <td>13</td>  
+				 <td>64</td>  
+				 <td>51</td>  
+				 <td class="league__gd">+13</td>  
+				 <td class="league__points">65</td>  
+			   </tr>  
+			   <tr data-colour="yellow" data-area="London">  
+				 <td class="league__pos">9.</td>  
+				 <td class="league__team">Watford</td>  
+				 <td>42</td>  
+				 <td>18</td>  
+				 <td>9</td>  
+				 <td>15</td>  
+				 <td>67</td>  
+				 <td>54</td>  
+				 <td class="league__gd">+13</td>  
+				 <td class="league__points">63</td>  
+			   </tr>  
+			   <tr data-colour="blue" data-area="Midlands">  
+				 <td class="league__pos">10.</td>  
+				 <td class="league__team">Coventry City</td>  
+				 <td>42</td>  
+				 <td>17</td>  
+				 <td>12</td>  
+				 <td>13</td>  
+				 <td>50</td>  
+				 <td>45</td>  
+				 <td class="league__gd">+5</td>  
+				 <td class="league__points">63</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="North West">  
+				 <td class="league__pos">11.</td>  
+				 <td class="league__team">Manchester United</td>  
+				 <td>42</td>  
+				 <td>14</td>  
+				 <td>14</td>  
+				 <td>14</td>  
+				 <td>52</td>  
+				 <td>45</td>  
+				 <td class="league__gd">+7</td>  
+				 <td class="league__points">56</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="South">  
+				 <td class="league__pos">12.</td>  
+				 <td class="league__team">Southampton</td>  
+				 <td>42</td>  
+				 <td>14</td>  
+				 <td>10</td>  
+				 <td>18</td>  
+				 <td>69</td>  
+				 <td>68</td>  
+				 <td class="league__gd">+1</td>  
+				 <td class="league__points">52</td>  
+			   </tr>  
+			   <tr data-colour="blue" data-area="Midlands">  
+				 <td class="league__pos">13.</td>  
+				 <td class="league__team">Sheffield Wednesday</td>  
+				 <td>42</td>  
+				 <td>13</td>  
+				 <td>13</td>  
+				 <td>16</td>  
+				 <td>58</td>  
+				 <td>59</td>  
+				 <td class="league__gd">-1</td>  
+				 <td class="league__points">52</td>  
+			   </tr>  
+			   <tr data-colour="blue" data-area="London">  
+				 <td class="league__pos">14.</td>  
+				 <td class="league__team">Chelsea</td>  
+				 <td>42</td>  
+				 <td>13</td>  
+				 <td>13</td>  
+				 <td>16</td>  
+				 <td>53</td>  
+				 <td>64</td>  
+				 <td class="league__gd">-11</td>  
+				 <td class="league__points">52</td>  
+			   </tr>  
+			   <tr data-colour="claret" data-area="London">  
+				 <td class="league__pos">15.</td>  
+				 <td class="league__team">West Ham United</td>  
+				 <td>42</td>  
+				 <td>14</td>  
+				 <td>10</td>  
+				 <td>18</td>  
+				 <td>52</td>  
+				 <td>67</td>  
+				 <td class="league__gd">-15</td>  
+				 <td class="league__points">52</td>  
+			   </tr>  
+			   <tr data-colour="blue" data-area="London">  
+				 <td class="league__pos">16.</td>  
+				 <td class="league__team">Queen's Park Rangers</td>  
+				 <td>42</td>  
+				 <td>13</td>  
+				 <td>11</td>  
+				 <td>18</td>  
+				 <td>48</td>  
+				 <td>64</td>  
+				 <td class="league__gd">-16</td>  
+				 <td class="league__points">50</td>  
+			   </tr>  
+			   <tr data-colour="white" data-area="North East">  
+				 <td class="league__pos">17.</td>  
+				 <td class="league__team">Newcastle United</td>  
+				 <td>42</td>  
+				 <td>12</td>  
+				 <td>11</td>  
+				 <td>19</td>  
+				 <td>47</td>  
+				 <td>65</td>  
+				 <td class="league__gd">-18</td>  
+				 <td class="league__points">47</td>  
+			   </tr>  
+			   <tr data-colour="yellow" data-area="Midlands">  
+				 <td class="league__pos">18.</td>  
+				 <td class="league__team">Oxford United</td>  
+				 <td>42</td>  
+				 <td>11</td>  
+				 <td>13</td>  
+				 <td>18</td>  
+				 <td>44</td>  
+				 <td>69</td>  
+				 <td class="league__gd">-25</td>  
+				 <td class="league__points">46</td>  
+			   </tr>  
+			   <tr data-colour="red" data-area="London">  
+				 <td class="league__pos">19.</td>  
+				 <td class="league__team">Charlton Athletic</td>  
+				 <td>42</td>  
+				 <td>11</td>  
+				 <td>11</td>  
+				 <td>20</td>  
+				 <td>45</td>  
+				 <td>55</td>  
+				 <td class="league__gd">-10</td>  
+				 <td class="league__points">44</td>  
+			   </tr>  
+			   <tr class="league__relegated" data-colour="blue" data-area="Midlands">  
+				 <td class="league__pos">20.</td>  
+				 <td class="league__team">Leicester City</td>  
+				 <td>42</td>  
+				 <td>11</td>  
+				 <td>9</td>  
+				 <td>22</td>  
+				 <td>54</td>  
+				 <td>76</td>  
+				 <td class="league__gd">-22</td>  
+				 <td class="league__points">42</td>  
+			   </tr>  
+			   <tr class="league__relegated" data-colour="blue" data-area="North West">  
+				 <td class="league__pos">21.</td>  
+				 <td class="league__team">Manchester City</td>  
+				 <td>42</td>  
+				 <td>8</td>  
+				 <td>15</td>  
+				 <td>19</td>  
+				 <td>36</td>  
+				 <td>57</td>  
+				 <td class="league__gd">-21</td>  
+				 <td class="league__points">39</td>  
+			   </tr>  
+			   <tr class="league__relegated" data-colour="claret" data-area="Midlands">  
+				 <td class="league__pos">22.</td>  
+				 <td class="league__team">Aston Villa</td>  
+				 <td>42</td>  
+				 <td>8</td>  
+				 <td>12</td>  
+				 <td>22</td>  
+				 <td>45</td>  
+				 <td>79</td>  
+				 <td class="league__gd">-34</td>  
+				 <td class="league__points">36</td>  
+			   </tr>  
+			 </tbody>  
+		   </table>  
+		 </div>  
+		 <script src="https://code.jquery.com/jquery-2.2.4.min.js"> </script>   
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.14/js/jquery.tablesorter.min.js"> </script>   
+		 <script src="https://www.jqueryscript.net/demo/Simple-jQuery-Dropdown-Table-Filter-Plugin-ddtf-js/ddtf.js"> </script>   
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/1.4.0/jquery.floatThead.min.js"> </script>   
+		 <script type="text/javascript">  
+		 $(function() {  
+		   $('#js-sort-table').tablesorter().floatThead();  
+		   //$("#js-sort-table").filterTable('-', 'GD');  
+		   $('.js-filter-drop').change(function() {  
+			 $('#js-sort-table tbody tr').hide();  
+			 var filters = $('.js-filter-drop').filter(function() {  
+			   return $(this).val() != '0';  
+			 });  
+			 var showSelector = '#js-sort-table tbody tr';  
+			 filters.each(function(index) {  
+			   showSelector += '[' + $(this).data('target') + '="' + $(this).val() + '"]';  
+			 });  
+			 $(showSelector).show();  
+		   });  
+		 $(".js-csv").on('click', function(event) {  
+			exportTableToCSV.apply(this, [$('#js-sort-table'), 'export-86-87-league.csv']);  
+		   });  
+		 });  
+		 function exportTableToCSV($table, filename) {  
+		   var $headers = $table.find('tr:has(th)'),  
+			 $rows = $table.find('tr:visible:has(td)')  
+		   , tmpColDelim = String.fromCharCode(11)  
+			 , tmpRowDelim = String.fromCharCode(0)  
+			 , colDelim = '","', rowDelim = '"\r\n"';  
+			var csv = '"';  
+		   csv += formatRows($headers.map(grabRow));  
+		   csv += rowDelim;  
+		   csv += formatRows($rows.map(grabRow)) + '"';  
+			 var csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);  
+		   if (window.navigator.msSaveOrOpenBlob) {  
+			 var blob = new Blob([decodeURIComponent(encodeURI(csv))], {  
+			   type: "text/csv;charset=utf-8;"  
+			 });  
+			 navigator.msSaveBlob(blob, filename);  
+		   } else {  
+			 $(this)  
+			   .attr({  
+				 'download': filename,  
+				 'href': csvData  
+				   //,'target' : '_blank'   
+			   });  
+		   }  
+		   function formatRows(rows) {  
+			 return rows.get().join(tmpRowDelim)  
+			   .split(tmpRowDelim).join(rowDelim)  
+			   .split(tmpColDelim).join(colDelim);  
+		   }  
+		   function grabRow(i, row) {  
+			 var $row = $(row);  
+			 //for some reason $cols = $row.find('td') || $row.find('th')    var $cols = $row.find('td');  
+			 if (!$cols.length) $cols = $row.find('th');  
+			 return $cols.map(grabCol)  
+			   .get().join(tmpColDelim);  
+		   }  
+		   function grabCol(j, col) {  
+			 var $col = $(col),  
+			   $text = $col.text();  
+			 return $text.replace('"', '""');   
+		   }  
+		 }  
+		 </script> -->
+			</body>
+
+	
+		
+			<nav aria-label="Page navigation example">
+				<ul class="pagination justify-content-end">
+				  <li class="page-item disabled">
+					<a class="page-link" href="#" tabindex="-1">Previous</a>
+				  </li>
+				  <li class="page-item"><a class="page-link" href="Traineedetails.html">1</a></li>
+				  <li class="page-item"><a class="page-link" href="#">2</a></li>
+				  <li class="page-item"><a class="page-link" href="#">3</a></li>
+				  <li class="page-item">
+					<a class="page-link" href="#">Next</a>
+				  </li>
+				</ul>
+			  </nav>
+	
+		
+		
+		{% endblock %}
+		</html>
+

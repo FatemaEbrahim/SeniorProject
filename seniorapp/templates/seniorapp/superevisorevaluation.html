@@ -22,21 +22,28 @@
 
   <head>
     <title>Evaluation</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+   
     <link rel="stylesheet" href="{%static 'seniorapp/css/Evaluation.css' %}">
   </head>
   <body>
-    <br><br><br><br><br><br>
+  <br>
+  <br>
+  <br>
     <div class="testbox">
-      <form action="/">
+      <form action="/"   >
        
-        
-        <h1>Trainee Evaluation Form</h1>
-        <p>Based upon your experience, observations of, and interactions with students, please rate them according to the following learning outcomes.
-            Rating Scheme: 1 Poor 2 Average 3 Good 4 Very good 5 Excellent N.A. Not Applicable</p>
-        <hr />
-        <h3>Overall experience with the trainee</h3>
+        <div  style="background-color: #efefef4f; border:solid #EFEFEF; padding: 1rem 1rem; text-align: center;">
+          
+              <h3 > Trainee Evaluation</h3>
+              
+            
+        </div>
+        <br>
+       <h4> <strong>Overall experience with the trainee</strong></h4>
+        <p>Based upon your experience, observations of, and interactions with students, please rate them according to the following learning outcomes.<br>
+          <strong><u>Rating Scheme:</u></strong>  &nbsp;<strong> <u>1</u></strong>  Poor &nbsp;<strong><u>2</u></strong> Average &nbsp;<strong><u>3</u></strong> Good &nbsp;<strong><u>4</u></strong> Very good &nbsp;<strong><u>5 </u></strong>Excellent &nbsp;<strong><u>N.A.</u></strong> Not Applicable</p>
+          <br>
+          ASk dr.Faisal about the questions, wether to use general questions or major-related questions
         <table>
           <tr>
             <th class="first-col"></th>
@@ -48,7 +55,7 @@
             <th>N.A</th>
           </tr>
           <tr>
-            <td class="first-col">How would you rate your overall experience with our service?</td>
+            <td class="first-col">Analyze professional problems and identify their requirements.</td>
             <td><input type="radio" value="none" name="rate" /></td>
             <td><input type="radio" value="none" name="rate" /></td>
             <td><input type="radio" value="none" name="rate" /></td>
@@ -57,7 +64,8 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the comprehensiveness of our offer?</td>
+            <td class="first-col">Design, implement, evaluate, or provide technical support for a
+              complex computer based systems.</td>
             <td><input type="radio" value="none" name="satisfied" /></td>
             <td><input type="radio" value="none" name="satisfied" /></td>
             <td><input type="radio" value="none" name="satisfied" /></td>
@@ -66,7 +74,7 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">How would you rate our prices?</td>
+            <td class="first-col">Participate and engage effectively in team work.</td>
             <td><input type="radio" value="none" name="prices" /></td>
             <td><input type="radio" value="none" name="prices" /></td>
             <td><input type="radio" value="none" name="prices" /></td>
@@ -75,7 +83,8 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the timeliness of order delivery?</td>
+            <td class="first-col">Demonstrate professional, ethical, and legal practice in IT and social
+              issues.</td>
             <td><input type="radio" value="none" name="timeliness" /></td>
             <td><input type="radio" value="none" name="timeliness" /></td>
             <td><input type="radio" value="none" name="timeliness" /></td>
@@ -84,7 +93,7 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">How satisfied are you with the customer support?</td>
+            <td class="first-col">Develop well-structured technical reports.</td>
             <td><input type="radio" value="none" name="name" /></td>
             <td><input type="radio" value="none" name="name" /></td>
             <td><input type="radio" value="none" name="name" /></td>
@@ -93,7 +102,26 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
           <tr>
-            <td class="first-col">Would you recommend our product / service to other people?</td>
+            <td class="first-col">Demonstrate effective oral communication skills.</td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Apply computer science concepts and software development fundamentals to
+              produce computer-based solutions</td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="recommend" /></td>
+            <td><input type="radio" value="none" name="rate" /></td>
+          </tr>
+          <tr>
+            <td class="first-col">Show commitment and punctuality to work, schedules, and timelines..</td>
             <td><input type="radio" value="none" name="recommend" /></td>
             <td><input type="radio" value="none" name="recommend" /></td>
             <td><input type="radio" value="none" name="recommend" /></td>
@@ -102,16 +130,28 @@
             <td><input type="radio" value="none" name="rate" /></td>
           </tr>
         </table>
-        <h4>What should we change in order to live up to your expectations?</h4>
-        <textarea rows="5"></textarea>
-        <h4>Email</h4>
-        <small>Only if you want to hear more from us.</small>
-        <input class="email" type="text" name="name" />
+      </br>
+       <table>
+         <tr>
+           <td style="background-color: #efefef4f; border:solid #EFEFEF; padding: 1rem 1rem; text-align: center;"><strong>Supervisor Comments</strong><br>
+
+            Would you like to add any additional comments about the student in particular, or about the students’
+            
+            knowledge and abilities to further improve our program outcome?</td>
+           
+         </tr>
+         <tr>
+          <td > <input type="text" style="border-color: white;"></td>
+          
+        </tr>
+       </table>
+       
         <div class="btn-block">
-          <button type="submit" href="/">Send Feedback</button>
+          <button type="submit" href="/" style="background-color: #004fa3;">Save Evaluation</button>
         </div>
       </form>
     </div>
+    
   </body>
 
 {% endblock %}

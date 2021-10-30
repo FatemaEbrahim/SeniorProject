@@ -21,5 +21,10 @@ urlpatterns = [
     path('companyprofile.html', views.companyprofile, name='companyprofile' ),
     path('superevisorevaluation.html', views.superevisorevaluation, name='superevisorevaluation' ),
     path('Register.html', views.Register, name='Register' ),
-    path('TryTemplate.html', views.TryTemplate, name='TryTemplate' )
+    path('TryTemplate.html', views.TryTemplate, name='TryTemplate' ), 
+    path('companieslist.html', views.companieslist, name='companieslist' ),
+    path('coordinatorprofile.html', views.coordinatorprofile, name='coordinatorprofile' ),
+    path('TraineedetailsSupervisor.html', views.TraineedetailsSupervisor, name='TraineedetailsSupervisor' ),
+    path('Traineelistsupervisor.html', views.Traineelistsupervisor, name='Traineelistsupervisor' ),
+    
 ]

@@ -62,4 +62,17 @@ def Register(request):
     return render (request ,'seniorapp\Register.html') 
 
 def TryTemplate(request):
-    return render (request ,'seniorapp\TryTemplate.html')                              
+    return render (request ,'seniorapp\TryTemplate.html')
+
+def companieslist(request): 
+    return render (request ,'seniorapp\companieslist.html')
+
+def coordinatorprofile(request):
+    return render (request ,'seniorapp\coordinatorprofile.html')  
+
+def TraineedetailsSupervisor(request):
+    return render (request ,'seniorapp\TraineedetailsSupervisor.html')   
+
+def Traineelistsupervisor(request):
+    return render (request ,'seniorapp\Traineelistsupervisor.html')       
+                                              

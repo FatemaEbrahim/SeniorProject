@@ -1,10 +1,110 @@
-{% extends 'seniorapp/TryTemplate.html' %}
-{% load static %}
 
-
-
-{% block content %}
-<style>
+    body{
+    background: -webkit-linear-gradient(left, grey);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: solid 2px rgb(128, 128, 128);
+    border-radius: 0.5rem;
+    background: #fff;
+   
+}
+.vl {
+    border-left: solid 2px rgba(128, 128, 128, 0.808);
+    height: 650px;
+    position: absolute;
+    left: 33%;
+    margin-left: -3px;
+    top: 18%;
+  }
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 50%;
+    height: 85%;
+    border-radius: 50%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
   /**
 
 Template Name: Able Pro Responsive Bootstrap 4 Admin Template
@@ -87,9 +187,7 @@ label {
 
 h6 {
   color: #757575;
-
-
-}
+  font-weight: 500; }
 
 ul {
   list-style: none;
@@ -4989,7 +5087,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 
 .img-full {
   width: 60%;
-  height: 60%}
+  height: 60%;}
 
 .user-block-1 {
   bottom: 75px;
@@ -6255,952 +6353,9 @@ svg#sun {
  background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2e6da4));background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);background-repeat:repeat-x}.navbar-default{background-image:-webkit-linear-gradient(top,#fff 0,#f8f8f8 100%);background-image:-o-linear-gradient(top,#fff 0,#f8f8f8 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#f8f8f8));background-image:linear-gradient(to bottom,#fff 0,#f8f8f8 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);background-repeat:repeat-x;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075)}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.open>a{background-image:-webkit-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);background-image:-o-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#e2e2e2));background-image:linear-gradient(to bottom,#dbdbdb 0,#e2e2e2 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);background-repeat:repeat-x;-webkit-box-shadow:inset 0 3px 9px rgba(0,0,0,.075);box-shadow:inset 0 3px 9px rgba(0,0,0,.075)}.navbar-brand,.navbar-nav>li>a{text-shadow:0 1px 0 rgba(255,255,255,.25)}.navbar-inverse{background-image:-webkit-linear-gradient(top,#3c3c3c 0,#222 100%);background-image:-o-linear-gradient(top,#3c3c3c 0,#222 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));background-image:linear-gradient(to bottom,#3c3c3c 0,#222 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);background-repeat:repeat-x;border-radius:4px}.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a{background-image:-webkit-linear-gradient(top,#080808 0,#0f0f0f 100%);background-image:-o-linear-gradient(top,#080808 0,#0f0f0f 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#080808),to(#0f0f0f));background-image:linear-gradient(to bottom,#080808 0,#0f0f0f 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff080808', endColorstr='#ff0f0f0f', GradientType=0);background-repeat:repeat-x;-webkit-box-shadow:inset 0 3px 9px rgba(0,0,0,.25);box-shadow:inset 0 3px 9px rgba(0,0,0,.25)}.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{text-shadow:0 -1px 0 rgba(0,0,0,.25)}.navbar-fixed-bottom,.navbar-fixed-top,.navbar-static-top{border-radius:0}@media (max-width:767px){.navbar .navbar-nav .open .dropdown-menu>.active>a,.navbar .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar .navbar-nav .open .dropdown-menu>.active>a:hover{color:#fff;background-image:-webkit-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:-o-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2e6da4));background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);background-repeat:repeat-x}}.alert{text-shadow:0 1px 0 rgba(255,255,255,.2);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(0,0,0,.05)}.alert-success{background-image:-webkit-linear-gradient(top,#dff0d8 0,#c8e5bc 100%);background-image:-o-linear-gradient(top,#dff0d8 0,#c8e5bc 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#dff0d8),to(#c8e5bc));background-image:linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);background-repeat:repeat-x;border-color:#b2dba1}.alert-info{background-image:-webkit-linear-gradient(top,#d9edf7 0,#b9def0 100%);background-image:-o-linear-gradient(top,#d9edf7 0,#b9def0 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#d9edf7),to(#b9def0));background-image:linear-gradient(to bottom,#d9edf7 0,#b9def0 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);background-repeat:repeat-x;border-color:#9acfea}.alert-warning{background-image:-webkit-linear-gradient(top,#fcf8e3 0,#f8efc0 100%);background-image:-o-linear-gradient(top,#fcf8e3 0,#f8efc0 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#fcf8e3),to(#f8efc0));background-image:linear-gradient(to bottom,#fcf8e3 0,#f8efc0 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fff8efc0', GradientType=0);background-repeat:repeat-x;border-color:#f5e79e}.alert-danger{background-image:-webkit-linear-gradient(top,#f2dede 0,#e7c3c3 100%);background-image:-o-linear-gradient(top,#f2dede 0,#e7c3c3 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#f2dede),to(#e7c3c3));background-image:linear-gradient(to bottom,#f2dede 0,#e7c3c3 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffe7c3c3', GradientType=0);background-repeat:repeat-x;border-color:#dca7a7}.progress{background-image:-webkit-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#ebebeb),to(#f5f5f5));background-image:linear-gradient(to bottom,#ebebeb 0,#f5f5f5 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff5f5f5', GradientType=0);background-repeat:repeat-x}.progress-bar{background-image:-webkit-linear-gradient(top,#337ab7 0,#286090 100%);background-image:-o-linear-gradient(top,#337ab7 0,#286090 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#286090));background-image:linear-gradient(to bottom,#337ab7 0,#286090 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff286090', GradientType=0);background-repeat:repeat-x}.progress-bar-success{background-image:-webkit-linear-gradient(top,#5cb85c 0,#449d44 100%);background-image:-o-linear-gradient(top,#5cb85c 0,#449d44 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#5cb85c),to(#449d44));background-image:linear-gradient(to bottom,#5cb85c 0,#449d44 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);background-repeat:repeat-x}.progress-bar-info{background-image:-webkit-linear-gradient(top,#5bc0de 0,#31b0d5 100%);background-image:-o-linear-gradient(top,#5bc0de 0,#31b0d5 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#31b0d5));background-image:linear-gradient(to bottom,#5bc0de 0,#31b0d5 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff31b0d5', GradientType=0);background-repeat:repeat-x}.progress-bar-warning{background-image:-webkit-linear-gradient(top,#f0ad4e 0,#ec971f 100%);background-image:-o-linear-gradient(top,#f0ad4e 0,#ec971f 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#f0ad4e),to(#ec971f));background-image:linear-gradient(to bottom,#f0ad4e 0,#ec971f 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffec971f', GradientType=0);background-repeat:repeat-x}.progress-bar-danger{background-image:-webkit-linear-gradient(top,#d9534f 0,#c9302c 100%);background-image:-o-linear-gradient(top,#d9534f 0,#c9302c 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#d9534f),to(#c9302c));background-image:linear-gradient(to bottom,#d9534f 0,#c9302c 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc9302c', GradientType=0);background-repeat:repeat-x}.progress-bar-striped{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}.list-group{border-radius:4px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.075);box-shadow:0 1px 2px rgba(0,0,0,.075)}.list-group-item.active,.list-group-item.active:focus,.list-group-item.active:hover{text-shadow:0 -1px 0 #286090;background-image:-webkit-linear-gradient(top,#337ab7 0,#2b669a 100%);background-image:-o-linear-gradient(top,#337ab7 0,#2b669a 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2b669a));background-image:linear-gradient(to bottom,#337ab7 0,#2b669a 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2b669a', GradientType=0);background-repeat:repeat-x;border-color:#2b669a}.list-group-item.active .badge,.list-group-item.active:focus .badge,.list-group-item.active:hover .badge{text-shadow:none}.panel{-webkit-box-shadow:0 1px 2px rgba(0,0,0,.05);box-shadow:0 1px 2px rgba(0,0,0,.05)}.panel-default>.panel-heading{background-image:-webkit-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);
   background-image:-o-linear-gradient(top,#f5f5f5 0,#e8e8e8 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#e8e8e8));background-image:linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);background-repeat:repeat-x}.panel-primary>.panel-heading{background-image:-webkit-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:-o-linear-gradient(top,#337ab7 0,#2e6da4 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#337ab7),to(#2e6da4));background-image:linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);background-repeat:repeat-x}.panel-success>.panel-heading{background-image:-webkit-linear-gradient(top,#dff0d8 0,#d0e9c6 100%);background-image:-o-linear-gradient(top,#dff0d8 0,#d0e9c6 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#dff0d8),to(#d0e9c6));background-image:linear-gradient(to bottom,#dff0d8 0,#d0e9c6 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffd0e9c6', GradientType=0);background-repeat:repeat-x}.panel-info>.panel-heading{background-image:-webkit-linear-gradient(top,#d9edf7 0,#c4e3f3 100%);background-image:-o-linear-gradient(top,#d9edf7 0,#c4e3f3 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#d9edf7),to(#c4e3f3));background-image:linear-gradient(to bottom,#d9edf7 0,#c4e3f3 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffc4e3f3', GradientType=0);background-repeat:repeat-x}.panel-warning>.panel-heading{background-image:-webkit-linear-gradient(top,#fcf8e3 0,#faf2cc 100%);background-image:-o-linear-gradient(top,#fcf8e3 0,#faf2cc 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#fcf8e3),to(#faf2cc));background-image:linear-gradient(to bottom,#fcf8e3 0,#faf2cc 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fffaf2cc', GradientType=0);background-repeat:repeat-x}.panel-danger>.panel-heading{background-image:-webkit-linear-gradient(top,#f2dede 0,#ebcccc 100%);background-image:-o-linear-gradient(top,#f2dede 0,#ebcccc 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#f2dede),to(#ebcccc));background-image:linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);background-repeat:repeat-x}.well{background-image:-webkit-linear-gradient(top,#e8e8e8 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#e8e8e8 0,#f5f5f5 100%);background-image:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#f5f5f5));background-image:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);background-repeat:repeat-x;border-color:#dcdcdc;-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 1px 0 rgba(255,255,255,.1)}
  /*# sourceMappingURL=bootstrap-theme.min.css.map */
-</style>
-<!doctype html>
-<head>
-<link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-<title>Profile</title>
-    <!-- Additional CSS Files -->
-	
-	<link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
-    <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
-      <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
-      <link rel="stylesheet" href="{%static 'seniorapp/css/profileC.css' %}">
-      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <br>
-    <br>
-    <br>
-    <!--<div class="container emp-profile" style="background-color: rgba(128, 128, 128, 0.212);">
-                <form method="post">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="profile-img">
-                                <img src="{%static 'seniorapp/images/Rcoordinator.jpg' %}" alt="" >
-                                <img src="{%static 'seniorapp/images/Rsupervisor.png' %}" alt="" >
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="profile-head">
-                                        <h5>
-                                            Kshiti Ghelani
-                                        </h5>
-                                        <h6>
-                                            Web Developer and Designer
-                                        </h6>
-                                        <p class="proile-rating">RANKINGS : <span>8/10</span></p>
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                       <div class="col-md-2">
-                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                        </div>
-                        
-<div class="vl"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="profile-work">
-                                <p>WORK LINK</p>
-                                <a href="">Website Link</a><br/>
-                                <a href="">Web Developer</a><br/>
-                                <a href="">WordPress</a><br/>
-                                <a href="">WooCommerce</a><br/>
-                                <a href="">PHP, .Net</a><br/>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="tab-content profile-tab" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>User Id</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>Kshiti123</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Name</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>Kshiti Ghelani</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Email</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>kshitighelani@gmail.com</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Phone</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>123 456 7890</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Profession</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>Web Developer and Designer</p>
-                                                </div>
-                                            </div>
-                                </div>
-                                
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Experience</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>Expert</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Hourly Rate</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>10$/hr</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Total Projects</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>230</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>English Level</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>Expert</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label>Availability</label>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p>6 months</p>
-                                                </div>
-                                            </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label>Your Bio</label><br/>
-                                            <p>Your detail description</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </form>           
-            </div>
-            </html>-->
 
-<style>
+
     /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button{background-color:transparent;background-image:none;padding:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset,ol,ul{margin:0;padding:0}ol,ul{list-style:none}html{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #d5d6d7}hr{border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#a0aec0}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#a0aec0}input::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#a0aec0}input::placeholder,textarea::placeholder{color:#a0aec0}[role=button],button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.form-input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding:.5rem .75rem;font-size:1rem;line-height:1.5}.form-input::-moz-placeholder{color:#9e9e9e;opacity:1}.form-input:-ms-input-placeholder{color:#9e9e9e;opacity:1}.form-input::-ms-input-placeholder{color:#9e9e9e;opacity:1}.form-input::placeholder{color:#9e9e9e;opacity:1}.form-input:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.form-textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding:.5rem .75rem;font-size:1rem;line-height:1.5}.form-textarea::-moz-placeholder{color:#9e9e9e;opacity:1}.form-textarea:-ms-input-placeholder{color:#9e9e9e;opacity:1}.form-textarea::-ms-input-placeholder{color:#9e9e9e;opacity:1}.form-textarea::placeholder{color:#9e9e9e;opacity:1}.form-textarea:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.form-multiselect{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding:.5rem .75rem;font-size:1rem;line-height:1.5}.form-multiselect:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.form-select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3E%3Cpath d='M15.3 9.3a1 1 0 011.4 1.4l-4 4a1 1 0 01-1.4 0l-4-4a1 1 0 011.4-1.4l3.3 3.29 3.3-3.3z'/%3E%3C/svg%3E");-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-print-color-adjust:exact;color-adjust:exact;background-repeat:no-repeat;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding:.5rem 2.5rem .5rem .75rem;font-size:1rem;line-height:1.5;background-position:right .5rem center;background-size:1.5em 1.5em}.form-select::-ms-expand{color:#a0aec0;border:none}@media not print{.form-select::-ms-expand{display:none}}@media print and (-ms-high-contrast:active),print and (-ms-high-contrast:none){.form-select{padding-right:.75rem}}.form-select:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.form-checkbox{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-print-color-adjust:exact;color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;flex-shrink:0;height:1em;width:1em;color:#4299e1;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem}.form-checkbox:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:50%;background-repeat:no-repeat}@media not print{.form-checkbox::-ms-check{border-width:1px;color:transparent;background:inherit;border-color:inherit;border-radius:inherit}}.form-checkbox:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.form-radio{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-print-color-adjust:exact;color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;flex-shrink:0;border-radius:100%;height:1em;width:1em;color:#4299e1;background-color:#fff;border-color:#e2e8f0;border-width:1px}.form-radio:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:50%;background-repeat:no-repeat}@media not print{.form-radio::-ms-check{border-width:1px;color:transparent;background:inherit;border-color:inherit;border-radius:inherit}}.form-radio:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.5);border-color:#63b3ed}.space-y-2>:not(template)~:not(template){--space-y-reverse:0;margin-top:calc(0.5rem*(1 - var(--space-y-reverse)));margin-bottom:calc(0.5rem*var(--space-y-reverse))}.space-x-3>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(0.75rem*var(--space-x-reverse));margin-left:calc(0.75rem*(1 - var(--space-x-reverse)))}.space-y-4>:not(template)~:not(template){--space-y-reverse:0;margin-top:calc(1rem*(1 - var(--space-y-reverse)));margin-bottom:calc(1rem*var(--space-y-reverse))}.space-x-4>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(1rem*var(--space-x-reverse));margin-left:calc(1rem*(1 - var(--space-x-reverse)))}.space-x-6>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(1.5rem*var(--space-x-reverse));margin-left:calc(1.5rem*(1 - var(--space-x-reverse)))}.divide-y>:not(template)~:not(template){--divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--divide-y-reverse)));border-bottom-width:calc(1px*var(--divide-y-reverse))}.theme-dark .dark\:divide-gray-700>:not(template)~:not(template){--divide-opacity:1;border-color:#24262d;border-color:rgba(36,38,45,var(--divide-opacity))}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-black{--bg-opacity:1;background-color:#000;background-color:rgba(0,0,0,var(--bg-opacity))}.bg-gray-50{--bg-opacity:1;background-color:#f9fafb;background-color:rgba(249,250,251,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f4f5f7;background-color:rgba(244,245,247,var(--bg-opacity))}.bg-red-100{--bg-opacity:1;background-color:#fde8e8;background-color:rgba(253,232,232,var(--bg-opacity))}.bg-red-600{--bg-opacity:1;background-color:#e02424;background-color:rgba(224,36,36,var(--bg-opacity))}.bg-orange-100{--bg-opacity:1;background-color:#feecdc;background-color:rgba(254,236,220,var(--bg-opacity))}.bg-green-100{--bg-opacity:1;background-color:#def7ec;background-color:rgba(222,247,236,var(--bg-opacity))}.bg-teal-100{--bg-opacity:1;background-color:#d5f5f6;background-color:rgba(213,245,246,var(--bg-opacity))}.bg-teal-500{--bg-opacity:1;background-color:#0694a2;background-color:rgba(6,148,162,var(--bg-opacity))}
     .bg-teal-600{--bg-opacity:1;background-color:#047481;background-color:rgba(4,116,129,var(--bg-opacity))}.bg-blue-100{--bg-opacity:1;background-color:#e1effe;background-color:rgba(225,239,254,var(--bg-opacity))}.bg-blue-500{--bg-opacity:1;background-color:#3f83f8;background-color:rgba(63,131,248,var(--bg-opacity))}.bg-blue-600{--bg-opacity:1;background-color:#1c64f2;background-color:rgba(28,100,242,var(--bg-opacity))}.bg-purple-600{--bg-opacity:1;background-color:#7e3af2;background-color:rgba(126,58,242,var(--bg-opacity))}.hover\:bg-gray-100:hover{--bg-opacity:1;background-color:#f4f5f7;background-color:rgba(244,245,247,var(--bg-opacity))}.hover\:bg-purple-700:hover{--bg-opacity:1;background-color:#6c2bd9;background-color:rgba(108,43,217,var(--bg-opacity))}.focus\:bg-white:focus{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.active\:bg-transparent:active{background-color:transparent}.active\:bg-purple-600:active{--bg-opacity:1;background-color:#7e3af2;background-color:rgba(126,58,242,var(--bg-opacity))}.theme-dark .dark\:bg-gray-700{--bg-opacity:1;background-color:#24262d;background-color:rgba(36,38,45,var(--bg-opacity))}.theme-dark .dark\:bg-gray-800{--bg-opacity:1;background-color:#1a1c23;background-color:rgba(26,28,35,var(--bg-opacity))}.theme-dark .dark\:bg-gray-900{--bg-opacity:1;background-color:#121317;background-color:rgba(18,19,23,var(--bg-opacity))}.theme-dark .dark\:bg-red-600{--bg-opacity:1;background-color:#e02424;background-color:rgba(224,36,36,var(--bg-opacity))}.theme-dark .dark\:bg-red-700{--bg-opacity:1;background-color:#c81e1e;background-color:rgba(200,30,30,var(--bg-opacity))}.theme-dark .dark\:bg-orange-500{--bg-opacity:1;background-color:#ff5a1f;background-color:rgba(255,90,31,var(--bg-opacity))}.theme-dark .dark\:bg-orange-600{--bg-opacity:1;background-color:#d03801;background-color:rgba(208,56,1,var(--bg-opacity))}.theme-dark .dark\:bg-green-500{--bg-opacity:1;background-color:#0e9f6e;background-color:rgba(14,159,110,var(--bg-opacity))}.theme-dark .dark\:bg-green-700{--bg-opacity:1;background-color:#046c4e;background-color:rgba(4,108,78,var(--bg-opacity))}.theme-dark .dark\:bg-teal-500{--bg-opacity:1;background-color:#0694a2;background-color:rgba(6,148,162,var(--bg-opacity))}.theme-dark .dark\:bg-blue-500{--bg-opacity:1;background-color:#3f83f8;background-color:rgba(63,131,248,var(--bg-opacity))}.theme-dark .dark\:hover\:bg-gray-800:hover{--bg-opacity:1;background-color:#1a1c23;background-color:rgba(26,28,35,var(--bg-opacity))}.bg-opacity-50{--bg-opacity:0.5}.border-transparent{border-color:transparent}.border-white{--border-opacity:1;border-color:#fff;border-color:rgba(255,255,255,var(--border-opacity))}.border-gray-100{--border-opacity:1;border-color:#f4f5f7;border-color:rgba(244,245,247,var(--border-opacity))}.border-gray-300{--border-opacity:1;border-color:#d5d6d7;border-color:rgba(213,214,215,var(--border-opacity))}.border-red-600{--border-opacity:1;border-color:#e02424;border-color:rgba(224,36,36,var(--border-opacity))}.border-green-600{--border-opacity:1;border-color:#057a55;border-color:rgba(5,122,85,var(--border-opacity))}.border-purple-600{--border-opacity:1;border-color:#7e3af2;border-color:rgba(126,58,242,var(--border-opacity))}.focus\:border-gray-500:focus{--border-opacity:1;border-color:#707275;border-color:rgba(112,114,117,var(--border-opacity))}.focus\:border-red-400:focus{--border-opacity:1;border-color:#f98080;border-color:rgba(249,128,128,var(--border-opacity))}.focus\:border-green-400:focus{--border-opacity:1;border-color:#31c48d;border-color:rgba(49,196,141,var(--border-opacity))}.focus\:border-purple-300:focus{--border-opacity:1;border-color:#cabffd;border-color:rgba(202,191,253,var(--border-opacity))}.focus\:border-purple-400:focus{--border-opacity:1;border-color:#ac94fa;border-color:rgba(172,148,250,var(--border-opacity))}.hover\:border-gray-500:hover{--border-opacity:1;border-color:#707275;border-color:rgba(112,114,117,var(--border-opacity))}.theme-dark .dark\:border-gray-600{--border-opacity:1;border-color:#4c4f52;border-color:rgba(76,79,82,var(--border-opacity))}.theme-dark .dark\:border-gray-700{--border-opacity:1;border-color:#24262d;border-color:rgba(36,38,45,var(--border-opacity))}.theme-dark .dark\:border-gray-800{--border-opacity:1;border-color:#1a1c23;border-color:rgba(26,28,35,var(--border-opacity))}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.rounded-lg{border-radius:.5rem}.rounded-full{border-radius:9999px}.rounded-r-md{border-top-right-radius:.375rem;border-bottom-right-radius:.375rem}.rounded-l-md{border-top-left-radius:.375rem;border-bottom-left-radius:.375rem}.rounded-t-lg{border-top-left-radius:.5rem}.rounded-r-lg,.rounded-t-lg{border-top-right-radius:.5rem}.rounded-r-lg{border-bottom-right-radius:.5rem}.rounded-l-lg{border-top-left-radius:.5rem;border-bottom-left-radius:.5rem}.rounded-tr-lg{border-top-right-radius:.5rem}.rounded-br-lg{border-bottom-right-radius:.5rem}.border-0{border-width:0}.border-2{border-width:2px}.border{border-width:1px}.border-r-0{border-right-width:0}.border-t{border-top-width:1px}.border-b{border-bottom-width:1px}.cursor-not-allowed{cursor:not-allowed}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.theme-dark .dark\:block{display:block}.theme-dark .dark\:hidden{display:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}.h-3{height:.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-12{height:3rem}.h-32{height:8rem}.h-full{height:100%}.h-screen{height:100vh}.text-xs{font-size:.75rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem}.text-6xl{font-size:4rem}.leading-5{line-height:1.25rem}.leading-none{line-height:1}.leading-tight{line-height:1.25}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.my-8{margin-top:2rem;margin-bottom:2rem}.mx-auto{margin-left:auto;margin-right:auto}.-mx-6{margin-left:-1.5rem;margin-right:-1.5rem}.mt-1{margin-top:.25rem}.mr-1{margin-right:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.mb-2{margin-bottom:.5rem}.ml-2{margin-left:.5rem}.mr-3{margin-right:.75rem}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mr-4{margin-right:1rem}.mb-4{margin-bottom:1rem}.ml-4{margin-left:1rem}.mr-5{margin-right:1.25rem}.mt-6{margin-top:1.5rem}.mr-6{margin-right:1.5rem}.mb-6{margin-bottom:1.5rem}.ml-6{margin-left:1.5rem}.mt-8{margin-top:2rem}.mb-8{margin-bottom:2rem}.mt-16{margin-top:4rem}.-mr-1{margin-right:-.25rem}.-ml-1{margin-left:-.25rem}.-mb-4{margin-bottom:-1rem}.max-h-0{max-height:0}.max-h-xl{max-height:36rem}.max-w-xl{max-width:36rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.min-h-screen{min-height:100vh}.min-w-0{min-width:0}.object-cover{-o-object-fit:cover;object-fit:cover}.opacity-0{opacity:0}.opacity-25{opacity:.25}.opacity-50{opacity:.5}.opacity-100{opacity:1}.focus\:outline-none:focus{outline:0}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pr-2{padding-right:.5rem}.pl-2{padding-left:.5rem}.pl-8{padding-left:2rem}.pr-10{padding-right:2.5rem}.pl-10{padding-left:2.5rem}.pb-16{padding-bottom:4rem}.pr-20{padding-right:5rem}.pl-20{padding-left:5rem}.placeholder-gray-600::-moz-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.placeholder-gray-600:-ms-input-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.placeholder-gray-600::-ms-input-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.placeholder-gray-600::placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.focus\:placeholder-gray-500:focus::-moz-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.focus\:placeholder-gray-500:focus:-ms-input-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.focus\:placeholder-gray-500:focus::-ms-input-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.focus\:placeholder-gray-500:focus::placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.theme-dark .dark\:placeholder-gray-500::-moz-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.theme-dark .dark\:placeholder-gray-500:-ms-input-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.theme-dark .dark\:placeholder-gray-500::-ms-input-placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}.theme-dark .dark\:placeholder-gray-500::placeholder{--placeholder-opacity:1;color:#707275;color:rgba(112,114,117,var(--placeholder-opacity))}
     .theme-dark .dark\:focus\:placeholder-gray-600:focus::-moz-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.theme-dark .dark\:focus\:placeholder-gray-600:focus:-ms-input-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.theme-dark .dark\:focus\:placeholder-gray-600:focus::-ms-input-placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.theme-dark .dark\:focus\:placeholder-gray-600:focus::placeholder{--placeholder-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--placeholder-opacity))}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{right:0;left:0}.inset-0,.inset-y-0{top:0;bottom:0}.top-0{top:0}.right-0{right:0}.left-0{left:0}.shadow-xs{box-shadow:0 0 0 1px rgba(0,0,0,.05)}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)}.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)}.shadow-inner{box-shadow:inset 0 2px 4px 0 rgba(0,0,0,.06)}.fill-current{fill:currentColor}.text-left{text-align:left}.text-center{text-align:center}.text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.text-black{--text-opacity:1;color:#000;color:rgba(0,0,0,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#9e9e9e;color:rgba(158,158,158,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#707275;color:rgba(112,114,117,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#4c4f52;color:rgba(76,79,82,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#24262d;color:rgba(36,38,45,var(--text-opacity))}.text-gray-800{--text-opacity:1;color:#1a1c23;color:rgba(26,28,35,var(--text-opacity))}.text-red-600{--text-opacity:1;color:#e02424;color:rgba(224,36,36,var(--text-opacity))}.text-red-700{--text-opacity:1;color:#c81e1e;color:rgba(200,30,30,var(--text-opacity))}.text-orange-500{--text-opacity:1;color:#ff5a1f;color:rgba(255,90,31,var(--text-opacity))}.text-orange-700{--text-opacity:1;color:#b43403;color:rgba(180,52,3,var(--text-opacity))}.text-green-500{--text-opacity:1;color:#0e9f6e;color:rgba(14,159,110,var(--text-opacity))}.text-green-600{--text-opacity:1;color:#057a55;color:rgba(5,122,85,var(--text-opacity))}.text-green-700{--text-opacity:1;color:#046c4e;color:rgba(4,108,78,var(--text-opacity))}.text-teal-500{--text-opacity:1;color:#0694a2;color:rgba(6,148,162,var(--text-opacity))}.text-blue-500{--text-opacity:1;color:#3f83f8;color:rgba(63,131,248,var(--text-opacity))}.text-purple-100{--text-opacity:1;color:#edebfe;color:rgba(237,235,254,var(--text-opacity))}.text-purple-200{--text-opacity:1;color:#dcd7fe;color:rgba(220,215,254,var(--text-opacity))}.text-purple-600{--text-opacity:1;color:#7e3af2;color:rgba(126,58,242,var(--text-opacity))}.focus-within\:text-purple-500:focus-within{--text-opacity:1;color:#9061f9;color:rgba(144,97,249,var(--text-opacity))}.focus-within\:text-purple-600:focus-within{--text-opacity:1;color:#7e3af2;color:rgba(126,58,242,var(--text-opacity))}.hover\:text-gray-700:hover{--text-opacity:1;color:#24262d;color:rgba(36,38,45,var(--text-opacity))}.hover\:text-gray-800:hover{--text-opacity:1;color:#1a1c23;color:rgba(26,28,35,var(--text-opacity))}.active\:text-gray-500:active{--text-opacity:1;color:#707275;color:rgba(112,114,117,var(--text-opacity))}.theme-dark .dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.theme-dark .dark\:text-gray-100{--text-opacity:1;color:#f4f5f7;color:rgba(244,245,247,var(--text-opacity))}.theme-dark .dark\:text-gray-200{--text-opacity:1;color:#e5e7eb;color:rgba(229,231,235,var(--text-opacity))}.theme-dark .dark\:text-gray-300{--text-opacity:1;color:#d5d6d7;color:rgba(213,214,215,var(--text-opacity))}.theme-dark .dark\:text-gray-400{--text-opacity:1;color:#9e9e9e;color:rgba(158,158,158,var(--text-opacity))}.theme-dark .dark\:text-red-100{--text-opacity:1;color:#fde8e8;color:rgba(253,232,232,var(--text-opacity))}.theme-dark .dark\:text-red-400{--text-opacity:1;color:#f98080;color:rgba(249,128,128,var(--text-opacity))}.theme-dark .dark\:text-orange-100{--text-opacity:1;color:#feecdc;color:rgba(254,236,220,var(--text-opacity))}.theme-dark .dark\:text-green-100{--text-opacity:1;color:#def7ec;color:rgba(222,247,236,var(--text-opacity))}.theme-dark .dark\:text-green-400{--text-opacity:1;color:#31c48d;color:rgba(49,196,141,var(--text-opacity))}.theme-dark .dark\:text-teal-100{--text-opacity:1;color:#d5f5f6;color:rgba(213,245,246,var(--text-opacity))}.theme-dark .dark\:text-blue-100{--text-opacity:1;color:#e1effe;color:rgba(225,239,254,var(--text-opacity))}.theme-dark .dark\:text-purple-300{--text-opacity:1;color:#cabffd;color:rgba(202,191,253,var(--text-opacity))}.theme-dark .dark\:text-purple-400{--text-opacity:1;color:#ac94fa;color:rgba(172,148,250,var(--text-opacity))}.theme-dark .dark\:focus-within\:text-purple-400:focus-within{--text-opacity:1;color:#ac94fa;color:rgba(172,148,250,var(--text-opacity))}.theme-dark .dark\:hover\:text-gray-200:hover{--text-opacity:1;color:#e5e7eb;color:rgba(229,231,235,var(--text-opacity))}.uppercase{text-transform:uppercase}.hover\:underline:hover,.underline{text-decoration:underline}.tracking-wide{letter-spacing:.025em}.align-middle{vertical-align:middle}.whitespace-no-wrap{white-space:nowrap}.w-1{width:.25rem}.w-3{width:.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-12{width:3rem}.w-56{width:14rem}.w-64{width:16rem}.w-full{width:100%}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.gap-6{grid-gap:1.5rem;gap:1.5rem}.col-span-2{grid-column:span 2/span 2}.col-span-3{grid-column:span 3/span 3}.col-span-4{grid-column:span 4/span 4}.transform{--transform-translate-x:0;--transform-translate-y:0;--transform-rotate:0;--transform-skew-x:0;--transform-skew-y:0;--transform-scale-x:1;--transform-scale-y:1;transform:translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))}.translate-x-1{--transform-translate-x:0.25rem}.-translate-x-20{--transform-translate-x:-5rem}.-translate-y-1{--transform-translate-y:-0.25rem}.translate-y-1\/2{--transform-translate-y:50%}.transition-all{transition-property:all}.transition{transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform}.transition-colors{transition-property:background-color,border-color,color,fill,stroke}.ease-in{transition-timing-function:cubic-bezier(.4,0,1,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150{transition-duration:.15s}.duration-300{transition-duration:.3s}.focus\:shadow-outline-gray:focus{box-shadow:0 0 0 3px rgba(213,214,215,.45)}.focus\:shadow-outline-red:focus{box-shadow:0 0 0 3px rgba(248,180,180,.45)}.focus\:shadow-outline-green:focus{box-shadow:0 0 0 3px rgba(132,225,188,.45)}.focus\:shadow-outline-purple:focus{box-shadow:0 0 0 3px rgba(202,191,253,.45)}.theme-dark .dark\:focus\:shadow-outline-gray:focus{box-shadow:0 0 0 3px rgba(213,214,215,.45)}@media (min-width:640px){.sm\:space-y-0>:not(template)~:not(template){--space-y-reverse:0;margin-top:calc(0px*(1 - var(--space-y-reverse)));margin-bottom:calc(0px*var(--space-y-reverse))}.sm\:space-x-6>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(1.5rem*var(--space-x-reverse));margin-left:calc(1.5rem*(1 - var(--space-x-reverse)))}.sm\:rounded-lg{border-radius:.5rem}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-end{justify-content:flex-end}.sm\:justify-center{justify-content:center}.sm\:m-4{margin:1rem}.sm\:mt-auto{margin-top:auto}.sm\:max-w-xl{max-width:36rem}.sm\:p-12{padding:3rem}.sm\:py-2{padding-top:.5rem;padding-bottom:.5rem}.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:w-auto{width:auto}.sm\:grid-cols-9{grid-template-columns:repeat(9,minmax(0,1fr))}}@media (min-width:768px){.md\:space-x-4>:not(template)~:not(template){--space-x-reverse:0;margin-right:calc(1rem*var(--space-x-reverse));margin-left:calc(1rem*(1 - var(--space-x-reverse)))}.md\:block{display:block}.md\:hidden{display:none}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:h-auto{height:auto}.md\:w-1\/2{width:50%}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:mr-32{margin-right:8rem}}@media (min-width:1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
-    @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);body {
-  font-family: "Roboto", sans-serif;
-  background: #EFF1F3;
-  min-height: 100vh;
-  position: relative;
-}
-
-.section-50 {
-  padding: 50px 0;
-}
-
-.m-b-50 {
-  margin-bottom: 50px;
-}
-
-.dark-link {
-  color: #333;
-}
-
-.heading-line {
-  position: relative;
-  padding-bottom: 5px;
-}
-
-.heading-line:after {
-  content: "";
-  height: 4px;
-  width: 132px;
-  background-color: #003D7a;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.notification-ui_dd-content {
-  margin-bottom: 30px;
-}
-
-.notification-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 7px;
-  background: #fff;
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-.notification-list--unread {
-  border-left: 2px solid #003D7a;
-}
-
-.notification-list .notification-list_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.notification-list .notification-list_content .notification-list_img img {
-  height: 48px;
-  width: 48px;
-  border-radius: 50px;
-  margin-right: 20px;
-}
-
-.notification-list .notification-list_content .notification-list_detail p {
-  margin-bottom: 5px;
-  line-height: 1.2;
-}
-
-.notification-list .notification-list_feature-img img {
-  height: 48px;
-  width: 48px;
-  border-radius: 5px;
-  margin-left: 20px;
-}
-
-
-</style>
-
-
-
-<!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/init-alpine.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/charts-lines.js" defer></script>
-    <script src="./assets/js/charts-pie.js" defer></script>
-  </head>
-  <body>
-    <div
-      class="flex h-screen bg-gray-50 dark:bg-gray-900"
-      :class="{ 'overflow-hidden': isSideMenuOpen }"
-    >
-    
-      <!-- Desktop sidebar -->
-      <aside
-        class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
-      >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
-        
-        
-          <a style="font-size: 17px"
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="#"
-          >
-          ICS Bahrain
-          </a>
-          <ul class="mt-6">
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
-                </svg>
-                <span class="ml-4">Company Profile</span>
-                <!--<a href="#middle">Go To Middle</a>-->
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
-                </svg>
-                <span class="ml-4">Notifications</span>
-              </a>
-            </li>
-            
-            
-          </ul>
-          
-        </div>
-      </aside>
-      
-      <!-- Mobile sidebar -->
-      <!-- Backdrop -->
-      <div
-        x-show="isSideMenuOpen"
-        x-transition:enter="transition ease-in-out duration-150"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in-out duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
-      ></div>
-      <aside
-        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
-        x-show="isSideMenuOpen"
-        x-transition:enter="transition ease-in-out duration-150"
-        x-transition:enter-start="opacity-0 transform -translate-x-20"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in-out duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0 transform -translate-x-20"
-        @click.away="closeSideMenu"
-        @keydown.escape="closeSideMenu"
-      >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
-          <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="#"
-          >
-            ICS Bahrain
-          </a>
-          <ul class="mt-6">
-            <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
-                </svg>
-                <span class="ml-4">Dashboard</span>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
-              >
-                <svg
-                
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="https://img.icons8.com/ios-glyphs/50/000000/user--v1.png"
-                  ></path>
-                </svg>
-                <span class="ml-4">Forms</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                  ></path>
-                </svg>
-                <span class="ml-4">Cards</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="charts.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
-                  ></path>
-                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-                </svg>
-                <span class="ml-4">Charts</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="buttons.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                  ></path>
-                </svg>
-                <span class="ml-4">Buttons</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <span class="ml-4">Modals</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="tables.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                </svg>
-                <span class="ml-4">Tables</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePagesMenu"
-                aria-haspopup="true"
-              >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
-                  <span class="ml-4">Pages</span>
-                </span>
-                <svg
-                  class="w-4 h-4"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              <template x-if="isPagesMenuOpen">
-                <ul
-                  x-transition:enter="transition-all ease-in-out duration-300"
-                  x-transition:enter-start="opacity-25 max-h-0"
-                  x-transition:enter-end="opacity-100 max-h-xl"
-                  x-transition:leave="transition-all ease-in-out duration-300"
-                  x-transition:leave-start="opacity-100 max-h-xl"
-                  x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
-                  aria-label="submenu"
-                >
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/login.html">Login</a>
-                  </li>
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/create-account.html">
-                      Create account
-                    </a>
-                  </li>
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/forgot-password.html">
-                      Forgot password
-                    </a>
-                  </li>
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/404.html">404</a>
-                  </li>
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/blank.html">Blank</a>
-                  </li>
-                </ul>
-              </template>
-            </li>
-          </ul>
-          <div class="px-6 my-6">
-            <button
-              class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-            >
-              Create account
-              <span class="ml-2" aria-hidden="true">+</span>
-            </button>
-          </div>
-        </div>
-      </aside>
-      <div class="flex flex-col flex-1 w-full">
-      
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Company Profile 
-            </h2>
-            <!-- CTA -->
-              <!--HERE STARTS THE PROFILE CARD-->
-             <!-- 1-3-block row start -->
-            <div class="row">
-               <div class="col-lg-12">
-                  <div class="card">
-                     <div class="user-block-2">
-                      <img class="img-fluid" src="{%static 'seniorapp/images/icsBahrain.jpg' %}"alt="user-header" style="width: 20%; border-color: #EFEFEF; border-width: 3px;">
-                      <h5 style="color: black;"><strong>Imagination Country Computer Solutions
-
-                        <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<u>Company Requirements:</u> 
-                      </strong> </h5> 
-                  
-                      <h6 style="color: black;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-users"></i>  High communication skills</h6>
-                       <h6 style="color: black;"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<i class="fa fa-globe"></i>  Fluent in Arabic and English</h6>
-                      <h6 style="color: black;"> &nbsp;&nbsp; <i class="fa fa-line-chart"></i> GPA more than 3</h6>
-                      <h6 style="color: black;">   <i class="fa fa-flag"></i> Bahraini citizen  </h6></div>
-                  
-                     
-                        <div class="user-block-2-activities">
-                           <div class="user-block-2-active">
-                              <i class="icofont icofont-users"></i><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/25/000000/external-email-interface-kiranshastry-lineal-kiranshastry.png" style="float: left;"/>Email:  info@icsbahrain.com
-                              
-                           </div>
-                        </div>
-
-                        <div class="user-block-2-activities">
-                           <div class="user-block-2-active">
-                               <i class="icofont icofont-ui-user"></i><img src="https://img.icons8.com/material-sharp/25/000000/home-office.png" style="float: left;"/>Adress: 947 Rd No. 3620, Karbabad
-                              
-                           </div>
-
-                        </div>
-                        <div class="user-block-2-activities">
-                           <div class="user-block-2-active">
-                            <i class="icofont icofont-picture"></i><img src="https://img.icons8.com/ios/25/000000/phone.png" style="float: left;"/>Office phonenumber: 17649461
-                              
-                           </div>
-                        </div>
-                       
-                     </div>
-                  </div>
-               </div>
-            
-                 
-        </main>
-      </div>
-    </div>
-    <!--HERE THE PROFILE CARD FINISHES-->
-   
-    
-	</header>
-
-	<section class="section-50">
-		<div class="container" id='middle'>
-			<h3 class="m-b-50 heading-line" style="font-size:25px;">Notifications <i class="fa fa-bell text-muted"></i></h3>
-
-			<div class="notification-ui_dd-content">
-				<div class="notification-list notification-list--unread">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-					
-						</div>
-						<div class="notification-list_detail">
-							<p><b>Recommendation</p>
-							<p class="text-muted">DR HADEEL,"SARA ISA Ahemed" Asked for a recommendation from you </p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-						
-					</div>
-				</div>
-				<div class="notification-list notification-list--unread">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-							
-						</div>
-						<div class="notification-list_detail">
-							<p><b>Company Request</p>
-							<p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-					
-					</div>
-				</div>
-				<div class="notification-list">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-					
-						</div>
-						<div class="notification-list_detail">
-              <p><b>Company Request</p>
-                <p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-						
-					</div>
-				</div>
-				<div class="notification-list">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-							
-						</div>
-						<div class="notification-list_detail">
-              <p><b>Company Request</p>
-                <p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-						
-					</div>
-				</div>
-				<div class="notification-list">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-							
-						</div>
-						<div class="notification-list_detail">
-              <p><b>Company Request</p>
-                <p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-					
-					</div>
-				</div>
-				<div class="notification-list">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-						
-						</div>
-						<div class="notification-list_detail">
-              <p><b>Company Request</p>
-                <p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-						
-					</div>
-				</div>
-				<div class="notification-list">
-					<div class="notification-list_content">
-						<div class="notification-list_img">
-						
-						</div>
-						<div class="notification-list_detail ">
-              <p><b>Company Request</p>
-                <p class="text-muted">DR HADELL, New Company Need your Approval.</p>
-							<p class="text-muted"><small>10 mins ago</small></p>
-						</div>
-					</div>
-					<div class="notification-list_feature-img">
-					
-					</div>
-				</div>
-			</div>
-
-			<div class="text-center">
-				<a href="#!" class="dark-link">Load more activity</a>
-			</div>
-
-		</div>
-	</section>
-
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  </body>
-<script>
-    /**
- * Limit focus to focusable elements inside `element`
- * @param {HTMLElement} element - DOM element to focus trap inside
- * @return {Function} cleanup function
- */
-function focusTrap(element) {
-  const focusableElements = getFocusableElements(element)
-  const firstFocusableEl = focusableElements[0]
-  const lastFocusableEl = focusableElements[focusableElements.length - 1]
-
-  // Wait for the case the element was not yet rendered
-  setTimeout(() => firstFocusableEl.focus(), 50)
-
-  /**
-   * Get all focusable elements inside `element`
-   * @param {HTMLElement} element - DOM element to focus trap inside
-   * @return {HTMLElement[]} List of focusable elements
-   */
-  function getFocusableElements(element = document) {
-    return [
-      ...element.querySelectorAll(
-        'a, button, details, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      ),
-    ].filter((e) => !e.hasAttribute('disabled'))
-  }
-
-  function handleKeyDown(e) {
-    const TAB = 9
-    const isTab = e.key.toLowerCase() === 'tab' || e.keyCode === TAB
-
-    if (!isTab) return
-
-    if (e.shiftKey) {
-      if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus()
-        e.preventDefault()
-      }
-    } else {
-      if (document.activeElement === lastFocusableEl) {
-        firstFocusableEl.focus()
-        e.preventDefault()
-      }
-    }
-  }
-
-  element.addEventListener('keydown', handleKeyDown)
-
-  return function cleanup() {
-    element.removeEventListener('keydown', handleKeyDown)
-  }
-}
-function data() {
-  function getThemeFromLocalStorage() {
-    // if user already changed the theme, use it
-    if (window.localStorage.getItem('dark')) {
-      return JSON.parse(window.localStorage.getItem('dark'))
-    }
-
-    // else return their preferences
-    return (
-      !!window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
-  }
-
-  function setThemeToLocalStorage(value) {
-    window.localStorage.setItem('dark', value)
-  }
-
-  return {
-    dark: getThemeFromLocalStorage(),
-    toggleTheme() {
-      this.dark = !this.dark
-      setThemeToLocalStorage(this.dark)
-    },
-    isSideMenuOpen: false,
-    toggleSideMenu() {
-      this.isSideMenuOpen = !this.isSideMenuOpen
-    },
-    closeSideMenu() {
-      this.isSideMenuOpen = false
-    },
-    isNotificationsMenuOpen: false,
-    toggleNotificationsMenu() {
-      this.isNotificationsMenuOpen = !this.isNotificationsMenuOpen
-    },
-    closeNotificationsMenu() {
-      this.isNotificationsMenuOpen = false
-    },
-    isProfileMenuOpen: false,
-    toggleProfileMenu() {
-      this.isProfileMenuOpen = !this.isProfileMenuOpen
-    },
-    closeProfileMenu() {
-      this.isProfileMenuOpen = false
-    },
-    isPagesMenuOpen: false,
-    togglePagesMenu() {
-      this.isPagesMenuOpen = !this.isPagesMenuOpen
-    },
-    // Modal
-    isModalOpen: false,
-    trapCleanup: null,
-    openModal() {
-      this.isModalOpen = true
-      this.trapCleanup = focusTrap(document.querySelector('#modal'))
-    },
-    closeModal() {
-      this.isModalOpen = false
-      this.trapCleanup()
-    },
-  }
-}
-
-</script>
-
-
-{% endblock %}
-</html>
