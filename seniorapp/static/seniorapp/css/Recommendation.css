@@ -9,9 +9,11 @@ Primary use:	Online Job Portal Theme
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   
 body{
 background:#ffffff;
-font-family: 'Montserrat', sans-serif;
+
+
 font-size:15px;
 color:#636e7b;
 }
@@ -22,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
     color:#242c36;
     margin: 0 0 15px 0;
     letter-spacing: 1px;
-    font-weight: bold;
+  
 }
 .dark{
 background: #efefefa2;
@@ -37,8 +39,8 @@ background: #efefefa2;
 }
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #2460ed;
-    background-color: #2460ed;
+    background-color:#004fa3;
+    background-color:#004fa3;
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: none;
@@ -52,7 +54,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     color: #6b797c;
 	font-weight:400;
 	font-size:14.2px;
-	font-family: 'Montserrat', sans-serif;
+	
     background-color: transparent !important;
 }
 nav.navbar.bootsnav ul.nav > li > a:hover{
@@ -257,7 +259,7 @@ border-bottom:1px solid rgba(107,121,124,0.1);
 }
 .information li span{
 display: inline-block;
-font-weight:bold;
+
 width:150px;
 }
 .social{
@@ -770,12 +772,12 @@ padding:60px 0;
     font-size: 22px;
     line-height: 34px;
     margin: 10px 0 20px;
-    font-family: initial;
+    
     font-style: italic;
 }
 .testimonial .testimonial-title{
     font-size: 14px;
-    font-weight: bold;
+   
     margin: 0;
     color:  #095484;
     text-transform: uppercase;
@@ -937,7 +939,7 @@ color:#ffffff;
 }
 .newsletter p {
     font-size: 23px;
-    font-family: initial;
+
     font-style: italic;
 }
 .newsletter input.form-control {

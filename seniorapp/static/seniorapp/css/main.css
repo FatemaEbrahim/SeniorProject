@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     color:#242c36;
     margin: 0 0 15px 0;
     letter-spacing: 1px;
-    font-weight: bold;
+  
 }
 .dark{
 background:#f4f5f7;
@@ -258,7 +258,7 @@ border-bottom:1px solid rgba(107,121,124,0.1);
 }
 .information li span{
 display: inline-block;
-font-weight:bold;
+
 width:150px;
 }
 .social{
@@ -776,7 +776,7 @@ padding:60px 0;
 }
 .testimonial .testimonial-title{
     font-size: 14px;
-    font-weight: bold;
+  
     margin: 0;
     color: #da0833;
     text-transform: uppercase;

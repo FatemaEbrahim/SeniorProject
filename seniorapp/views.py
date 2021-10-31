@@ -11,7 +11,7 @@ from .custom_auth import StudentAuthBackend
 
 # Create your views here.
 
-def _login(request):
+def login(request):
     return render (request ,'seniorapp\login.html')
 
 def contact(request):

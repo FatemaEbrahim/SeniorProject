@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6{
 	color:#3f3f3f;
 	margin:0 0 15px 0;
     letter-spacing: 1px;
-    font-weight: bold;
+
 }
 
 h1{
@@ -162,7 +162,7 @@ ul.cart-list > li.total > .btn{
     
     nav.navbar-sidebar ul.nav > li > a{
         padding: 10px 15px;
-        font-weight: bold;
+    
     }
     
     /* Navbar Transparent & Fixed ------*/

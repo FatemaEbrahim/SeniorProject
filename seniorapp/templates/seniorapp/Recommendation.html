@@ -24,9 +24,9 @@
   <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
 
   <link rel="stylesheet" href="{%static 'seniorapp/css/plugins.css' %}">
-	<link rel="stylesheet" href="{%static 'seniorapp/css/common.css' %}">
+  <link rel="stylesheet" href="{%static 'seniorapp/css/common.css' %}">
   <link rel="stylesheet" href="{%static 'seniorapp/css/main.css' %}">
-  
+
   <link rel="stylesheet" href="{%static 'seniorapp/css/Recommendation.css' %}">
 
 
@@ -46,263 +46,235 @@
   <!-- ***** Preloader End ***** -->
 
   <!-- Page Content -->
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="row justify-content-center">
-      <div class="heading-section" >
-          <div class="request-form" style="background-color: #efefef4f; border:solid #EFEFEF" >
-              <div class="container">
-                  <div class="row">
-                      <div class="col-md-8">
-                          <h3 > Recommendation Request</h3>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div
+      style="background-color: #efefef4f; border:solid #EFEFEF; padding: 1rem 1rem; text-align: center; width: 80%; margin: auto; ">
+      <br>
+      <h3 style="font-size: 20px;">Request Recommendation</h3>
 
-                      </div>
-                      <div>
-                        <div class="container">
-       
-                          <form >
-                            <fieldset>
-                              <br>
-                              <div class="col-md-4 col-sm-4 no-pad">
-                                <input type="text" class="form-control border-right" placeholder="Search By Name ... ">
-                              </div>
-                              <div class="col-md-3 col-sm-3 no-pad">
-                                <select class="selectpicker border-right">
-                                  <option>Department</option>
-                                  <option>Department of Information Systems</option>
-                                  <option>Department of Computer Science</option>
-                                  <option>Department of Computer Engineering</option>
-                                  <option>Department of Chemistry</option>
-                                  <option>Department of Physics</option>
-                                </select>
-                              </div>
-                              <div class="col-md-3 col-sm-3 no-pad">
-                                <select class="selectpicker">
-                                  <option>College</option>
-                                  <option>College of applied studies </option>
-                                  <option>Bahrain teachers college</option>
-                                  <option>College of engineering </option>
-                                  <option>College of information technology </option>
-                                  <option>College of science </option>
-                                  <option>College of arts</option>
-                                  <option>College of business adminstration </option>
-                                  <option>College of health and sport sciences</option>
-                                  <option>College of law</option>
-                                </select>
-                              </div>
-                              <div class="col-md-2 col-sm-2 no-pad">
-                                <input type="submit" class="btn seub-btn" value="submit" style=" float:left; height: 39px;  border: 0px; background-color: #2460ed; color:#fff; ">
-                              </div>
-                            </fieldset>
-                          </form>
-                    
-                        <!--  <input id='myInput' onkeyup='searchH3()' placeholder="Search" type='text'
-                              style="height: 60%;width: 200%; font-size: small;">
-                              -->
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
 
-  </div>
-</div>
-      
-<br>
+    </div>
 
- 
 
-      
-      
-     
+    <form style=" height: 50px;  width: 100%;  margin-left: -5px; margin-bottom: 40px;">
+      <fieldset>
+        <div class="col-md-4 col-sm-4 no-pad">
+            
+          <input type="text" class="form-control border-right"class="selectpicker" placeholder="Search "style="height: 45px;">
+        </div>
+        <div class="col-md-3 col-sm-3 no-pad">
+          <select class="selectpicker" style="height: 45px;" >
+            <option>College</option>
+            <option>College of applied studies </option>
+            <option>Bahrain teachers college</option>
+            <option>College of engineering </option>
+            <option>College of information technology </option>
+            <option>College of science </option>
+            <option>College of arts</option>
+            <option>College of business adminstration </option>
+            <option>College of health and sport sciences</option>
+            <option>College of law</option>
+          </select>
+        </div>
+        <div class="col-md-3 col-sm-3 no-pad">
+          <select class="selectpicker border-right" style="height: 45px;">
+            <option>Department</option>
+            <option>Department of Information Systems</option>
+            <option>Department of Computer Science</option>
+            <option>Department of Computer Engineering</option>
+            <option>Department of Chemistry</option>
+            <option>Department of Physics</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-2 no-pad">
+          <input type="submit" class="selectpicker" class="btn seub-btn" value="submit" style="  float:left; height: 45px;  border: 0px;background-color: #004fa3; color:#fff;  ">
+        </div>
+      </fieldset>
+    </form>
 
-        <br>
-        <br><br>
-       
-        <div class="row">
-          <div id="IT" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D1.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Dr. Mazen Mohammed Ali</h5>
-                    <p class="text-muted">Associate Professor
-                      Information System</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px;  background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
+
+
+
+
+    <div class="row">
+      <div id="IT" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D1.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Dr. Mazen Mohammed Ali</h5>
+                <p class="text-muted">Associate Professor
+                  Information System</p>
               </div>
             </div>
-          </div>
-          <div id="law" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D2.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Dr. A.Jabbar Ahmed Al Tayeb</h5>
-                    <p class="text-muted">Assistant Professor
-                      Public Law</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px;  background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
-              </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
             </div>
           </div>
-
-          <div id="science" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D3.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Mrs. Chiraz Mohd Balfekih</h5>
-                    <p class="text-muted">Lecturer</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px; background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="Architecture" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D4.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Dr. Nehal Al Murbati</h5>
-                    <p class="text-muted"> Assistant Professor
-                      Architecture and Design</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px;  background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="Arts" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D5.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Dr. Mamoon Ahmed Aburaud</h5>
-                    <p class="text-muted">Assistant Professor
-                      Social Science</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px;  background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div id="Business" class="col-md-4 col-sm-4">
-            <div class="left-widget-sidebar">
-              <div class="card-widget bg-white user-card">
-                <div class="u-img img-cover" style="background-size:cover;"></div>
-                <div class="u-content">
-                  <img 
-                    src="{%static 'seniorapp\images\D6.png' %}" alt="">
-                  <div style="margin-top: 10pt;">
-                    <h5>Dr. Mohamed Z. Yassin</h5>
-                    <p class="text-muted"> Assistant Professor
-                      Accounting</p>
-                  </div>
-                </div>
-                <div class="user-social-profile">
-                  <ul>
-                    <button style=" border-radius: 20px; border: 0px;  background-color: #2460ed; color:#fff; ">
-                      Send Request
-                    </button>
-                    <br>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
         </div>
       </div>
-      
+      <div id="law" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D2.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Dr. A.Jabbar Ahmed Al Tayeb</h5>
+                <p class="text-muted">Assistant Professor
+                  Public Law</p>
+              </div>
+            </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="science" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D3.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Mrs. Chiraz Mohd Balfekih</h5>
+                <p class="text-muted">Lecturer</p>
+              </div>
+            </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px; background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Architecture" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D4.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Dr. Nehal Al Murbati</h5>
+                <p class="text-muted"> Assistant Professor
+                  Architecture and Design</p>
+              </div>
+            </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Arts" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D5.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Dr. Mamoon Ahmed Aburaud</h5>
+                <p class="text-muted">Assistant Professor
+                  Social Science</p>
+              </div>
+            </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-      <br>
-  
+      <div id="Business" class="col-md-4 col-sm-4">
+        <div class="left-widget-sidebar">
+          <div class="card-widget bg-white user-card">
+            <div class="u-img img-cover" style="background-size:cover;"></div>
+            <div class="u-content">
+              <img src="{%static 'seniorapp\images\D6.png' %}" alt="">
+              <div style="margin-top: 10pt;">
+                <h5>Dr. Mohamed Z. Yassin</h5>
+                <p class="text-muted"> Assistant Professor
+                  Accounting</p>
+              </div>
+            </div>
+            <div class="user-social-profile">
+              <ul>
+                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
+                  Send Request
+                </button>
+                <br>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
-      <!-- Bootstrap core JavaScript -->
-      <script src="{%static 'seniorapp/jquery/jquery.min.js' %}"></script>
-      <script src="{%static 'seniorapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    </div>
+  </div>
 
-      <!-- Additional Scripts -->
-      <script src="{%static 'seniorapp/js/custom.js' %}"></script>
-      <script src="{%static 'seniorapp/js/owl.js' %}"></script>
-      <script src="{%static 'seniorapp/js/slick.js' %}"></script>
-      <script src="{%static 'seniorapp/js/accordions.js' %}"></script>
 
-      <script language="text/Javascript">
-        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-        function clearField(t) {                   //declaring the array outside of the
-          if (!cleared[t.id]) {                      // function makes it static and global
-            cleared[t.id] = 1;  // you could use true and false, but that's more typing
-            t.value = '';         // with more chance of typos
-            t.style.color = '#fff';
-          }
-        }
-      </script>
+
+  <br>
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{%static 'seniorapp/jquery/jquery.min.js' %}"></script>
+  <script src="{%static 'seniorapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Additional Scripts -->
+  <script src="{%static 'seniorapp/js/custom.js' %}"></script>
+  <script src="{%static 'seniorapp/js/owl.js' %}"></script>
+  <script src="{%static 'seniorapp/js/slick.js' %}"></script>
+  <script src="{%static 'seniorapp/js/accordions.js' %}"></script>
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {                   //declaring the array outside of the
+      if (!cleared[t.id]) {                      // function makes it static and global
+        cleared[t.id] = 1;  // you could use true and false, but that's more typing
+        t.value = '';         // with more chance of typos
+        t.style.color = '#fff';
+      }
+    }
+  </script>
 
 </body>
 {% endblock %}

@@ -1,11 +1,8 @@
-* {
-  margin: 0;
-  padding: 0
-}
+
 
 html {
   height: 100%
-   
+  
 }
 
 p {
@@ -137,7 +134,6 @@ p {
 }
 
 #progressbar {
-  margin-bottom: 30px;
   overflow: hidden;
   color: lightgrey
 }
@@ -157,22 +153,17 @@ p {
 
 #progressbar #account:before {
   font-family: FontAwesome;
-  content: "\f13e"
+  content: "1"
 }
 
 #progressbar #personal:before {
   font-family: FontAwesome;
-  content: "\f007"
+  content: "2"
 }
 
 #progressbar #payment:before {
   font-family: FontAwesome;
-  content: "\f030"
-}
-
-#progressbar #confirm:before {
-  font-family: FontAwesome;
-  content: "\f00c"
+  content: "3"
 }
 
 #progressbar li:before {
