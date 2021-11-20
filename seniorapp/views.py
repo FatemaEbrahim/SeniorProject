@@ -11,8 +11,8 @@ from .custom_auth import StudentAuthBackend
 
 # Create your views here.
 
-def login(request):
-    return render (request ,'seniorapp\login.html')
+def home(request):
+    return render (request ,'seniorapp\home.html')
 
 def contact(request):
     return render (request ,'seniorapp\contact.html')

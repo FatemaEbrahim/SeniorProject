@@ -8340,4 +8340,59 @@ h1, h2, h3, h4, h5,
       width: 100%;
       text-align: left;
   }
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: arial;
+  }
+  
+  
+  .pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    float: left;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+  
+    color: #004fa3;
+  
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+  
+  .modal-3 a {
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+  }
+  .modal-3 a:hover {
+    background-color: rgba(128, 128, 128, 0.384);
+  }
+  .modal-3 a.active, .modal-3 a:active {
+    background-color: rgba(128, 128, 128, 0.185);
+  }
   

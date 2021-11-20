@@ -142,13 +142,15 @@
         }
         table, th, td {
         border:1px solid #DDDDDD;
-        text-align: center;
+        text-align: left;
         background-color: #FFF; 
         color: black;
         
         
   }
   
+  
       .checkbox{
           float: inline-end;
       }
+      

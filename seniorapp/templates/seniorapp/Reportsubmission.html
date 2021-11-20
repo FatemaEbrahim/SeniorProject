@@ -1,149 +1,176 @@
 {% extends 'seniorapp/TryTemplate.html' %}
 {% load static %}
 {% block content %}
+<!DOCTYPE html>
+<html>
+
 <head>
+  <title>Report Submission</title>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   
+ 
+  <!-- Bootstrap Core CSS -->
+  <!--     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  
+
+  <link rel="icon" href="https://mkfbh.org/wp-content/uploads/2021/04/logo-uob.png" type="image/x-icon">
+  <!-- Bootstrap core CSS -->
+  <link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+
   <link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
   <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
   <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
   <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/Report.css' %}">
   
-  <link rel="icon" href="https://mkfbh.org/wp-content/uploads/2021/04/logo-uob.png" type="image/x-icon">
+ 
   
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <link rel="stylesheet" href="{%static 'seniorapp/css/cv.css' %}">
 </head>
-  <body>
-    <br>
-    <br>
-    <br>
-    <div class="testbox">
-    <form action="/">
-      <div class="banner" >
-        
-        <h1 style="color:#000">Internship Training Report Submission</h1>
-      </div>
-      <br>
-    
-    
-    <fieldset>
-    </hr>
-      <legend>Student Information</legend>
-      <table style=" width:100% ">
-        <tr>
-          <th>Student Name</th>
-          <th>Student ID</th>
-          <th>Major</th>
-          <th>Credits Passed </th>
-        </tr>
-        <tr>
-          <td>Sara Isa Ahmed</td>
-          <td>20161011</td>
-          <td>Computer science</td>
-          <td>131</td>
-        </tr>
-        </table>
-      <hr/>
+
+<body>
+  <br>
+
+  <br>
+  <div class="testbox">
+    <form action="/" style="padding: 2rem 1rem;">
       <fieldset>
-        <legend>Internship Training Report</legend>
-        <div class="item">
-          <label for="name">• Internship Training Report Template <br></label>
-          <br>
-          <div class="user-social-profile">
-            <ul>
-            <li>&nbsp;<a href="#"></i>&nbsp;Download Template &nbsp;<i class="fa fa-file-pdf-o" ></i></a></li>
-          </ul>
+   
+        
+        <legend style="background-color: #e9ecef; color: black; border-radius: .3rem; "> &nbsp;Student Information</legend>
+        <table style=" width:100%; margin-top: 7.5px; margin-bottom: 15px;   ">
+          <tr > 
+            <th style=" width:25%; text-align: center;">Student Name</th>
+            <th style=" width:25%; text-align: center;" >Student ID</th>
+            <th style=" width:25%; text-align: center; ">Major</th>
+            <th style=" width:25%; text-align: center;">Credits Passed </th>
+          </tr>
+          <tr>
+            <td style=" text-align: center;">Sara Isa Ahmed</td>
+            <td style="  text-align: center;">20161011</td>
+            <td style="  text-align: center;">Computer science</td>
+            <td style="  text-align: center;">131</td>
+          </tr>
+        </table>
+      
+    </fieldset>
+        <fieldset >
+          <legend style="background-color: #e9ecef; color: black; border-radius: .3rem;" > &nbsp;Internship Training Report</legend>
+         
+          <div class="item" >
+            <label for="name">• Internship Training Report Template </label>
+            
+            <div class="user-social-profile">
+              <ul>
+              <li>&nbsp;<a href="#"></i>&nbsp;Download Template &nbsp;<i class="fa fa-file-pdf-o" ></i></a></li>
+            </ul>
+            </div>
+            
+          </div>
+          <div class="item">
+            <label for="address">• Submit Your Internship Training Report <span>*</span></label><br>
+            <input id="report" type="file" name="report"  required/>
           </div>
           
-        </div>
-        <div class="item">
-          <label for="address">• Submit Your Internship Training Report <span>*</span></label>
-          <input id="report" type="file" name="report"  required/>
-        </div>
+        </fieldset>
+       
+        <fieldset>
+          <!--BG:style="background-color: #efefef4f; color: black; border:1px solid #DDDDDD" -->
+          <legend style="background-color: #e9ecef; color: black; border-radius: .3rem;">&nbsp;Training Evaluation</legend>
+          &ensp;
+          <table style="width: 100%;" style="float: left;">
+            <tr>
+              <th class="first-col" style="text-align: center;"> Criteria</th>
+              <th style="width: 15%; text-align: center;" >Strongly agree</th>
+              <th style="width: 15%; text-align: center;">Agree</th>
+              <th style="width: 15%; text-align: center;">Disagree</th>
+              <th style="width: 15%; text-align: center;">Strongly disagree</th>
+              
+              
+            </tr>
+            <tr >
+              <td class="first-col" >Training was relevant to my needs</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">Materials Provided were helpful</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="satisfied" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="satisfied" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="satisfied" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="satisfied" /></td>
+      
+            </tr>
+            <tr>
+              <td class="first-col">Lenghth of training was sufficient</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="prices" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="prices" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="prices" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="prices" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">Content was well organised</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="timeliness" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="timeliness" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="timeliness" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="timeliness" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">Questions were well organised</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="name" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="name" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="name" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="name" /></td>
+              
+            </tr>
+            <tr>
+              <td class="first-col">Instructions were clear and understandable</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="recommend" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="recommend" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="recommend" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="recommend" /></td>
+            
+            </tr>
+            <tr>
+              <td class="first-col">Training met my expectations</td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"> <input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="expectations" /></td>
+            </tr>
+            <tr>
+              <td class="first-col">The presenter and/or presentation was effective </td>
+              <td style="text-align: center;"><input type="radio" value="none" name="Presentation" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="Presentation" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="Presentation" /></td>
+              <td style="text-align: center;"><input type="radio" value="none" name="Presentation" /></td>
+            
+            </tr>
+          </table>
+        </fieldset>
         
-      </fieldset>
-      <hr/>
+      
       <fieldset>
-<legend>Training Evaluation</legend>
-
-    
-    <table style="width: 100%;">
-      <tr>
-        <th class="first-col"> Criteria</th>
-        <th>Strongly agree</th>
-        <th>Agree</th>
-        <th>Disagree</th>
-        <th>Strongly disagree</th>
-        
-        
-      </tr>
-      <tr>
-        <td class="first-col">Training was relevant to my needs</td>
-        <td><input type="radio" value="none" name="rate" /></td>
-        <td><input type="radio" value="none" name="rate" /></td>
-        <td><input type="radio" value="none" name="rate" /></td>
-        <td><input type="radio" value="none" name="rate" /></td>
-      </tr>
-      <tr>
-        <td class="first-col">Materials Provided were helpful</td>
-        <td><input type="radio" value="none" name="satisfied" /></td>
-        <td><input type="radio" value="none" name="satisfied" /></td>
-        <td><input type="radio" value="none" name="satisfied" /></td>
-        <td><input type="radio" value="none" name="satisfied" /></td>
-
-      </tr>
-      <tr>
-        <td class="first-col">Lenghth of training was sufficient</td>
-        <td><input type="radio" value="none" name="prices" /></td>
-        <td><input type="radio" value="none" name="prices" /></td>
-        <td><input type="radio" value="none" name="prices" /></td>
-        <td><input type="radio" value="none" name="prices" /></td>
-      </tr>
-      <tr>
-        <td class="first-col">Content was well organised</td>
-        <td><input type="radio" value="none" name="timeliness" /></td>
-        <td><input type="radio" value="none" name="timeliness" /></td>
-        <td><input type="radio" value="none" name="timeliness" /></td>
-        <td><input type="radio" value="none" name="timeliness" /></td>
-      </tr>
-      <tr>
-        <td class="first-col">Questions were well organised</td>
-        <td><input type="radio" value="none" name="name" /></td>
-        <td><input type="radio" value="none" name="name" /></td>
-        <td><input type="radio" value="none" name="name" /></td>
-        <td><input type="radio" value="none" name="name" /></td>
-        
-      </tr>
-      <tr>
-        <td class="first-col">Instructions were clear and understandable</td>
-        <td><input type="radio" value="none" name="recommend" /></td>
-        <td><input type="radio" value="none" name="recommend" /></td>
-        <td><input type="radio" value="none" name="recommend" /></td>
-        <td><input type="radio" value="none" name="recommend" /></td>
       
-      </tr>
-      <tr>
-        <td class="first-col">Training met my expectations</td>
-        <td><input type="radio" value="none" name="expectations" /></td>
-        <td><input type="radio" value="none" name="expectations" /></td>
-        <td><input type="radio" value="none" name="expectations" /></td>
-        <td><input type="radio" value="none" name="expectations" /></td>
-      
-      </tr>
-      <tr>
-        <td class="first-col">The presenter and/or presentation was effective </td>
-        <td><input type="radio" value="none" name="Presentation" /></td>
-        <td><input type="radio" value="none" name="Presentation" /></td>
-        <td><input type="radio" value="none" name="Presentation" /></td>
-        <td><input type="radio" value="none" name="Presentation" /></td>
-      
-      </tr>
-    </table>
-      </fieldset>
-        <hr/>
-      <div class="btn-block">
-      <button type="submit" href="/">Submit</button>
-      </div>
+        <div class="btn-block">
+          <button type="submit" href="/"  style="background-color: #004fa3;">Save</button>
+        </div>
     </form>
-    </div>
-  </body>
-  {% endblock %}
+  </div>
+</body>
+{% endblock %}
+
+</html>

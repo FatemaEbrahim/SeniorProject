@@ -171,23 +171,7 @@ margin-bottom:80px;
 position: relative;
 margin-top: -5px;
 }
-.notify .ring {
-position: absolute;
-top: -20px;
-left: 50px;
-height: 25px;
-width: 25px;
-z-index: 10;
-border: 5px solid #da0833;
-border-radius: 100%;
--moz-animation: ring 1s ease-in;
--moz-animation-iteration-count: infinite;
--o-animation: ring 1s ease-in;
--o-animation-iteration-count: infinite;
--webkit-animation: ring 1s ease-in;
--webkit-animation-iteration-count: infinite;
-animation-iteration-count: infinite;
-}
+
 .notify .ring-point {
 width: 6px;
 height: 6px;
@@ -199,14 +183,7 @@ position: absolute;
 left: 59px;
 top: -10px;
 }
-@-moz-keyframes ring{0%{-moz-transform:scale(0);opacity:0}25%{-moz-transform:scale(.1);opacity:.1}50%{-moz-transform:scale(.5);opacity:.3}75%{-moz-transform:scale(.8);opacity:.5}100%{-moz-transform:scale(1);opacity:0}}@-webkit-keyframes ring{0%{-webkit-transform:scale(0);opacity:0}25%{-webkit-transform:scale(.1);opacity:.1}50%{-webkit-transform:scale(.5);opacity:.3}75%{-webkit-transform:scale(.8);opacity:.5}100%{-webkit-transform:scale(1);opacity:0}}
-.jumbotron h4{
-font-size:28px;
-margin-top:12px;
-margin-bottom:10px;
-position:relative;
-color:#ffffff;
-}
+
 .jumbotron p{
 font-size:17px;
 position:relative;
@@ -469,25 +446,14 @@ width: 100%;
 margin:0 auto;
 max-width:100px
 }
-.company-content{
-}
+
 .company-content h3{
 font-size:25px;
 font-weight:400;
 margin-bottom:10px;
 margin-top:7px;
 }
-.company-content h3 span {
-font-size: 13px;
-padding: 2px 20px;
-float: right;
-text-align: center;
-color: #ffffff;
-margin-top: 5px;
-display: inline-block;
-line-height: 1.7;
-border-radius: 2px;
-}
+
 .company-content p span{
 font-size:15px;
 margin-right:20px;
@@ -559,25 +525,14 @@ width: 100%;
 margin:0 auto;
 max-width:100px
 }
-.company-content{
-}
+
 .company-content h3{
 font-size:25px;
 font-weight:400;
 margin-bottom:10px;
 margin-top:7px;
 }
-.company-content h3 span {
-font-size: 13px;
-padding: 2px 20px;
-float: right;
-text-align: center;
-color: #ffffff;
-margin-top: 5px;
-display: inline-block;
-line-height: 1.7;
-border-radius: 2px;
-}
+
 .company-content p span{
 font-size:15px;
 margin-right:20px;
@@ -1181,3 +1136,59 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-decoration: none;
   cursor: pointer;
 }
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: arial;
+  }
+  
+  
+  .pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    float: left;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+  
+    color: #004fa3;
+  
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+  
+  .modal-3 a {
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+  }
+  .modal-3 a:hover {
+    background-color: rgba(128, 128, 128, 0.384);
+  }
+  .modal-3 a.active, .modal-3 a:active {
+    background-color: rgba(128, 128, 128, 0.185);
+  }
+  

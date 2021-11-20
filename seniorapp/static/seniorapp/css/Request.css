@@ -49,7 +49,8 @@ p {
   margin-top: 2px;
   width: 100%;
   box-sizing: border-box;
-  font-family: montserrat;
+ 
+
   color: #2C3E50;
   background-color: #ECEFF1;
   font-size: 16px;
@@ -68,10 +69,10 @@ p {
 #msform .action-button {
   width: 100px;
   background: #003D7A;
-  font-weight: bold;
+  font-weight: lighter;
   color: white;
   border: 0 none;
-  border-radius: 0px;
+  border-radius: 5px; 
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 0px 10px 5px;
@@ -86,10 +87,10 @@ p {
 #msform .action-button-previous {
   width: 100px;
   background: #616161;
-  font-weight: bold;
+  font-weight:lighter;
   color: white;
   border: 0 none;
-  border-radius: 0px;
+  border-radius: 5px; 
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px 10px 0px;
@@ -135,11 +136,13 @@ p {
 
 #progressbar {
   overflow: hidden;
-  color: lightgrey
+  color: lightgrey;
+
 }
 
 #progressbar .active {
-  color: #003D7A
+  color: #003D7A;
+
 }
 
 #progressbar li {
@@ -152,17 +155,17 @@ p {
 }
 
 #progressbar #account:before {
-  font-family: FontAwesome;
+
   content: "1"
 }
 
 #progressbar #personal:before {
-  font-family: FontAwesome;
+
   content: "2"
 }
 
 #progressbar #payment:before {
-  font-family: FontAwesome;
+
   content: "3"
 }
 
@@ -192,7 +195,8 @@ p {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #003D7A
+  background: #003D7A;
+
 }
 
 .progress {

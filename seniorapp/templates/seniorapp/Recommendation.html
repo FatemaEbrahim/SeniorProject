@@ -1,282 +1,569 @@
 {% extends 'seniorapp/TryTemplate.html' %}
 {% load static %}
 {% block content %}
-<!DOCTYPE html>
+<style>
+  .instant-search {
+  position: relative;
+  max-width: 250px;
+}
+
+.instant-search,
+.instant-search__input {
+  font-family: sans-serif;
+}
+
+.instant-search,
+.instant-search * {
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.instant-search:focus-within {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.instant-search--loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #009578;
+  border-radius: 5px;
+  animation: searchIndicator 0.5s infinite ease-in-out;
+}
+
+@keyframes searchIndicator {
+  0% {
+    width: 15%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+
+.instant-search,
+.instant-search__input-container {
+  border-radius: 5px;
+}
+
+.instant-search__input-container {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  background: #eeeeee;
+}
+
+.instant-search__input-container:focus-within {
+  background: #ffffff;
+}
+
+.instant-search__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 6px;
+  background: transparent;
+}
+
+.instant-search__results-container {
+  max-height: 250px;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+
+.instant-search__results-container--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.instant-search__result {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.instant-search__result:hover {
+  background: #eeeeee;
+}
+
+.instant-search__result:not(:last-of-type) {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.instant-search__title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.instant-search__paragraph {
+  line-height: 1.5;
+  margin: 8px 0;
+}
+/* PAGE NUMBERS STYLES STARTS HERE ---->*/ 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: arial;
+}
+
+
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+
+  color: #004fa3;
+
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+
+.modal-3 a {
+  margin-left: 3px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  text-align: center;
+}
+.modal-3 a:hover {
+  background-color: rgba(128, 128, 128, 0.384);
+}
+.modal-3 a.active, .modal-3 a:active {
+  background-color: rgba(128, 128, 128, 0.185);
+}
+
+</style>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="TemplateMo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-    rel="stylesheet">
-
-  <title>Recommendation</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="{%static 'seniorapp/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/style.css' %}">
-
-  <link rel="stylesheet" href="{%static 'seniorapp/css/plugins.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/common.css' %}">
-  <link rel="stylesheet" href="{%static 'seniorapp/css/main.css' %}">
-
-  <link rel="stylesheet" href="{%static 'seniorapp/css/Recommendation.css' %}">
-
-
-
-</head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="preloader">
-    <div class="jumper">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- Page Content -->
-  <br>
-  <br>
-  <br>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Recommendation</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="{%static 'seniorapp/css/fontawesome.css' %}">
+        <link rel="stylesheet" href="{%static 'seniorapp/css/templatemo-finance-business.css' %}">
+        <link rel="stylesheet" href="{%static 'seniorapp/css/owl.css' %}">
+      
+        <link rel="stylesheet" href="{%static 'seniorapp/css/Recommendation.css' %}">
+        <link rel="stylesheet" href="{%static 'seniorapp/css/responsive.css' %}">
+     
+    </head>
+    <body>
+<!--================Team Area =================-->
+<section class="team_area p_120">
   <div class="container">
-    <div
-      style="background-color: #efefef4f; border:solid #EFEFEF; padding: 1rem 1rem; text-align: center; width: 80%; margin: auto; ">
-      <br>
-      <h3 style="font-size: 20px;">Request Recommendation</h3>
-
-
+    <div class="main_title">
+ <p style="color: black; font-size: 24px;"> &nbsp;&nbsp;Choose the instructor you need recommendation from:</p>
+ <br> <br>
+ <input id='myInput' onkeyup='searchTable()'  placeholder="Search" type='text'
+ style="height: 6%;width: 70%; font-size: small; margin-left: 210px;">
     </div>
+    
+                                          <br>
+                                                
 
+<!--this is the video serach bar<div id="searchUsers" class="instant-search">
+  <div class="instant-search__input-container">
+     <input class="instant-search__input" type="text" spellcheck="false" placeholder="Search Users">-->
+  </div>
+</div>
+<script>
+  /**
+ * @typedef {Object} InstantSearchOptions
+ * @property {URL} searchUrl The URL which the search bar will query to retrieve results
+ * @property {string} queryParam The name of the query parameter to be used in each request
+ * @property {Function} responseParser Takes the response from the instant search and returns an array of results
+ * @property {Function} templateFunction Takes an instant search result and produces the HTML for it
+ */
 
-    <form style=" height: 50px;  width: 100%;  margin-left: -5px; margin-bottom: 40px;">
-      <fieldset>
-        <div class="col-md-4 col-sm-4 no-pad">
-            
-          <input type="text" class="form-control border-right"class="selectpicker" placeholder="Search "style="height: 45px;">
-        </div>
-        <div class="col-md-3 col-sm-3 no-pad">
-          <select class="selectpicker" style="height: 45px;" >
-            <option>College</option>
-            <option>College of applied studies </option>
-            <option>Bahrain teachers college</option>
-            <option>College of engineering </option>
-            <option>College of information technology </option>
-            <option>College of science </option>
-            <option>College of arts</option>
-            <option>College of business adminstration </option>
-            <option>College of health and sport sciences</option>
-            <option>College of law</option>
-          </select>
-        </div>
-        <div class="col-md-3 col-sm-3 no-pad">
-          <select class="selectpicker border-right" style="height: 45px;">
-            <option>Department</option>
-            <option>Department of Information Systems</option>
-            <option>Department of Computer Science</option>
-            <option>Department of Computer Engineering</option>
-            <option>Department of Chemistry</option>
-            <option>Department of Physics</option>
-          </select>
-        </div>
-        <div class="col-md-2 col-sm-2 no-pad">
-          <input type="submit" class="selectpicker" class="btn seub-btn" value="submit" style="  float:left; height: 45px;  border: 0px;background-color: #004fa3; color:#fff;  ">
-        </div>
-      </fieldset>
-    </form>
+class InstantSearch {
+  /**
+   * Initialises the instant search bar. Retrieves and creates elements.
+   *
+   * @param {HTMLElement} instantSearch The container element for the instant search
+   * @param {InstantSearchOptions} options A list of options for configuration
+   */
+  constructor(instantSearch, options) {
+    this.options = options;
+    this.elements = {
+      main: instantSearch,
+      input: instantSearch.querySelector(".instant-search__input"),
+      resultsContainer: document.createElement("div")
+    };
 
+    this.elements.resultsContainer.classList.add(
+      "instant-search__results-container"
+    );
+    this.elements.main.appendChild(this.elements.resultsContainer);
 
+    this.addListeners();
+  }
 
+  /**
+   * Adds event listeners for elements of the instant search.
+   */
+  addListeners() {
+    let delay;
 
+    this.elements.input.addEventListener("input", () => {
+      clearTimeout(delay);
 
-    <div class="row">
-      <div id="IT" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D1.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Dr. Mazen Mohammed Ali</h5>
-                <p class="text-muted">Associate Professor
-                  Information System</p>
-              </div>
+      const query = this.elements.input.value;
+
+      delay = setTimeout(() => {
+        if (query.length < 3) {
+          this.populateResults([]);
+          return;
+        }
+
+        this.performSearch(query).then((results) => {
+          this.populateResults(results);
+        });
+      }, 500);
+    });
+
+    this.elements.input.addEventListener("focus", () => {
+      this.elements.resultsContainer.classList.add(
+        "instant-search__results-container--visible"
+      );
+    });
+
+    this.elements.input.addEventListener("blur", () => {
+      this.elements.resultsContainer.classList.remove(
+        "instant-search__results-container--visible"
+      );
+    });
+  }
+
+  /**
+   * Updates the HTML to display each result under the search bar.
+   *
+   * @param {Object[]} results
+   */
+  populateResults(results) {
+    // Clear all existing results
+    while (this.elements.resultsContainer.firstChild) {
+      this.elements.resultsContainer.removeChild(
+        this.elements.resultsContainer.firstChild
+      );
+    }
+
+    // Update list of results under the search bar
+    for (const result of results) {
+      this.elements.resultsContainer.appendChild(
+        this.createResultElement(result)
+      );
+    }
+  }
+
+  /**
+   * Creates the HTML to represents a single result in the list of results.
+   *
+   * @param {Object} result An instant search result
+   * @returns {HTMLAnchorElement}
+   */
+  createResultElement(result) {
+    const anchorElement = document.createElement("a");
+
+    anchorElement.classList.add("instant-search__result");
+    anchorElement.insertAdjacentHTML(
+      "afterbegin",
+      this.options.templateFunction(result)
+    );
+
+    // If provided, add a link for the result
+    if ("href" in result) {
+      anchorElement.setAttribute("href", result.href);
+    }
+
+    return anchorElement;
+  }
+
+  /**
+   * Makes a request at the search URL and retrieves results.
+   *
+   * @param {string} query Search query
+   * @returns {Promise<Object[]>}
+   */
+  performSearch(query) {
+    const url = new URL(this.options.searchUrl.toString());
+
+    url.searchParams.set(this.options.queryParam, query);
+
+    this.setLoading(true);
+
+    return fetch(url, {
+      method: "get"
+    })
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error("Something went wrong with the search!");
+        }
+
+        return response.json();
+      })
+      .then((responseData) => {
+        console.log(responseData);
+
+        return this.options.responseParser(responseData);
+      })
+      .catch((error) => {
+        console.error(error);
+
+        return [];
+      })
+      .finally((results) => {
+        this.setLoading(false);
+
+        return results;
+      });
+  }
+
+  /**
+   * Shows or hides the loading indicator for the search bar.
+   *
+   * @param {boolean} b True will show the loading indicator, false will not
+   */
+  setLoading(b) {
+    this.elements.main.classList.toggle("instant-search--loading", b);
+  }
+}
+
+export default InstantSearch;
+
+/* Loaded with <script type="module"> */
+import InstantSearch from "./InstantSearch.js";
+
+const searchUsers = document.querySelector("#searchUsers");
+const instantSearchUsers = new InstantSearch(searchUsers, {
+  searchUrl: new URL(
+    "/projects/instant-search/search.php",
+    window.location.origin
+  ),
+  queryParam: "q",
+  responseParser: (responseData) => {
+    return responseData.results;
+  },
+  templateFunction: (result) => {
+    return `
+            <div class="instant-search__title">${result.firstName} ${result.lastName}</div>
+            <p class="instant-search__paragraph">${result.occupation}</p>
+        `;
+  }
+});
+
+</script>
+    <div class="row team_inner" >
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drHussain.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
-            </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Hussain Al-Arayedh</h4>
+            <p>Assistant Professor<br>
+              Information System</p>
           </div>
         </div>
       </div>
-      <div id="law" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D2.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Dr. A.Jabbar Ahmed Al Tayeb</h5>
-                <p class="text-muted">Assistant Professor
-                  Public Law</p>
-              </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drGhadeer.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
-            </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Ghadeer Ismail </h4>
+            <p>
+              Assistant Professor<br>
+              Information System
+             </p>
           </div>
         </div>
       </div>
-
-      <div id="science" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D3.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Mrs. Chiraz Mohd Balfekih</h5>
-                <p class="text-muted">Lecturer</p>
-              </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drEhab.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px; background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
-            </div>
+          </div>
+          <div class="team_name">
+            <h4>
+              Dr. Ehab Adwan
+              
+              </h4>
+            <p>Assistant Professor<br>
+              Information System</p>
           </div>
         </div>
       </div>
-
-      <div id="Architecture" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D4.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Dr. Nehal Al Murbati</h5>
-                <p class="text-muted"> Assistant Professor
-                  Architecture and Design</p>
-              </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drYasser.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
+              
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
+          </div>
+          <div class="team_name">
+            <h4>Mr. Yasser AlKhateeb</h4>
+            <p>Lecturer<br>
+              Computer Science</p>
+          </div>
+        </div>
+        <br><br><br><br>
+      </div>
+ 
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drYousif.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Youssef Harrath</h4>
+            <p>Assistant Professor<br>
+              Computer Science</p>
           </div>
         </div>
       </div>
-
-      <div id="Arts" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D5.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Dr. Mamoon Ahmed Aburaud</h5>
-                <p class="text-muted">Assistant Professor
-                  Social Science</p>
-              </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drAhmed.png' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
-            </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Ahmed Mohammed Zeki</h4>
+            <p>Assistant Professor<br>
+              Information System</p>
           </div>
         </div>
       </div>
-
-
-      <div id="Business" class="col-md-4 col-sm-4">
-        <div class="left-widget-sidebar">
-          <div class="card-widget bg-white user-card">
-            <div class="u-img img-cover" style="background-size:cover;"></div>
-            <div class="u-content">
-              <img src="{%static 'seniorapp\images\D6.png' %}" alt="">
-              <div style="margin-top: 10pt;">
-                <h5>Dr. Mohamed Z. Yassin</h5>
-                <p class="text-muted"> Assistant Professor
-                  Accounting</p>
-              </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drWael.jpg' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
             </div>
-            <div class="user-social-profile">
-              <ul>
-                <button style=" border-radius: 20px; border: 0px;  background-color: #004fa3; color:#fff; ">
-                  Send Request
-                </button>
-                <br>
-              </ul>
-            </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Wael Elmedany</h4>
+            <p>Associate professor<br>
+              Computer Engineering</p>
           </div>
         </div>
       </div>
-
-
-
+      <div class="col-lg-3 col-sm-6">
+        <div class="team_item">
+          <div class="team_img">
+            <img class="img-fluid" src="{%static 'seniorapp/images/drAmal.jpg' %}" alt="" style="height: 350px;">
+            <div class="hover">
+              <a href="Request.html" style="color: blue; font-size: 16px;">Send Request</i></a>
+            </div>
+          </div>
+          <div class="team_name">
+            <h4>Dr. Amal Saleh Ghanem</h4>
+            <p>Assistant Professor<br>
+              Computer Science</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-
-
-  <br>
-
-
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{%static 'seniorapp/jquery/jquery.min.js' %}"></script>
-  <script src="{%static 'seniorapp/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-  <!-- Additional Scripts -->
-  <script src="{%static 'seniorapp/js/custom.js' %}"></script>
-  <script src="{%static 'seniorapp/js/owl.js' %}"></script>
-  <script src="{%static 'seniorapp/js/slick.js' %}"></script>
-  <script src="{%static 'seniorapp/js/accordions.js' %}"></script>
-
-  <script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) {                   //declaring the array outside of the
-      if (!cleared[t.id]) {                      // function makes it static and global
-        cleared[t.id] = 1;  // you could use true and false, but that's more typing
-        t.value = '';         // with more chance of typos
-        t.style.color = '#fff';
-      }
-    }
-  </script>
-
+</section>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul class="pagination modal-3">
+  <li><a href="#" class="prev">&laquo</a></li>
+  <li><a href="#" class="active">1</a></li>
+  <li> <a href="#">2</a></li>
+  <li> <a href="#">3</a></li>
+  <li> <a href="#">4</a></li>
+  <li> <a href="#">5</a></li>
+  <li> <a href="#">6</a></li>
+  <li> <a href="#">7</a></li>
+  <li> <a href="#">8</a></li>
+  <li> <a href="#">9</a></li>
+  <li><a href="#" class="next">&raquo;</a></li>
+</ul><br> <br>
+<!--================End Team Area =================-->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope-min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+<script src="vendors/counter-up/jquery.counterup.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+<script src="vendors/scroll/jquery.nicescroll.min.js"></script>
+<script src="js/theme.js"></script>
 </body>
-{% endblock %}
 
+
+
+{% endblock %}
 </html>
